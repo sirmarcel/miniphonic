@@ -9,10 +9,14 @@ rescue LoadError
 end
 
 def stub_response(status, headers, body = {})
-  stubs = Faraday::Adapter::Test::Stubs.new
+  stubs = create_stub_adapter
   stubs.get('/'){[status, headers, MultiJson.dump(body)]}
   test = Faraday.new do |builder|
     builder.adapter :test, stubs
   end
   test.get '/'
+end
+
+def create_stub_adapter
+  Faraday::Adapter::Test::Stubs.new
 end
