@@ -50,7 +50,22 @@ module Miniphonic
       end
     end
 
-    # TODO: Test on server things
+    describe '#create_on_server' do
+
+      before do
+        @object = ApiObject.new
+        @object.stubs(:endpoint).returns("test")
+        @connection = mock
+        @response = stub_response(200, {})
+      end
+
+      it 'should post' do
+        @connection.expects(:post).returns(@response)
+        @object.create_on_server({}, @connection)
+      end
+
+      # TODO: Actually mock a real connection and verify the sent data. That is, however, beyond my powers.
+    end
 
   end
 end
