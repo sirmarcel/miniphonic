@@ -13,7 +13,10 @@ module Miniphonic
     end
 
     def connect
-      connection = Faraday.new(url: 'https://auphonic.com')
+      connection = Faraday.new(url: 'https://auphonic.com') do |con|
+        con.request :multipart
+        con.adapter :net_http
+      end
       connection.basic_auth user, password
       connection
     end
