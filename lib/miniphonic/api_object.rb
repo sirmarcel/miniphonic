@@ -18,7 +18,6 @@ module Miniphonic
       if response.success?
         @uuid = response.data["uuid"]
       else
-        error_message = MultiJson.load(response.body)
         raise "Error on server, responded #{ response.status } with message #{ response.body["error_message"]}."
       end
     end

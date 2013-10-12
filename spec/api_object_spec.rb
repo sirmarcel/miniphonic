@@ -23,19 +23,30 @@ module Miniphonic
 
     describe '#create_with_payload' do
       before do
-        body = {
+        good_body = {
           "data" => {
             "uuid" => "test"
           }
         }
-        @response = Miniphonic::Response.new(stub_response(200, {}, body))
+        bad_body = {
+          "error_message" => "trololo"
+        }
+        @good_response = Miniphonic::Response.new(stub_response(200, {}, good_body))
+        @bad_response = Miniphonic::Response.new(stub_response(404, {}, bad_body))
+        @object = ApiObject.new
       end
 
       it 'should set uuid if successful' do
-        ApiObject.any_instance.expects(:create_on_server).returns(@response)
-        object = ApiObject.new
-        object.create_with_payload("")
-        object.uuid.must_equal("test")
+        ApiObject.any_instance.expects(:create_on_server).returns(@good_response)
+        @object.create_with_payload("")
+        @object.uuid.must_equal("test")
+      end
+
+      it 'should raise an error if request fails' do
+        ApiObject.any_instance.expects(:create_on_server).returns(@bad_response)
+        lambda do
+          @object.create_with_payload("")
+        end.must_raise(RuntimeError)
       end
     end
 
