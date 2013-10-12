@@ -12,6 +12,8 @@ def stub_response(status, headers, body = {})
   stubs = create_stub_adapter
   stubs.get('/'){[status, headers, MultiJson.dump(body)]}
   test = Faraday.new do |builder|
+    builder.use FaradayMiddleware::ParseJson
+    builder.use FaradayMiddleware::EncodeJson
     builder.adapter :test, stubs
   end
   test.get '/'

@@ -8,10 +8,9 @@ module Miniphonic
 
     def initialize(response)
       @response = response
-      @body = MultiJson.load(@response.body)
-      @data = @body["data"]
+      @data = response.body["data"]
     end
 
-    def_delegators :@response, :status, :success?
+    def_delegators :@response, :status, :success?, :body
   end
 end

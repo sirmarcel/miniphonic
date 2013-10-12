@@ -15,12 +15,6 @@ module Miniphonic
       @response = Miniphonic::Response.new(raw_response)
     end
 
-    describe '#body' do
-      it 'should parse the body into a hash' do
-        @response.body.must_equal(@response_body)
-      end
-    end
-
     describe '#data' do
       it 'should take the data out of the body' do
         @response.data.must_equal(@response_body["data"])

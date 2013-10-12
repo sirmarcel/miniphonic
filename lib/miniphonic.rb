@@ -1,8 +1,10 @@
+require "faraday"
+require "faraday_middleware"
+
 require "miniphonic/version"
 require "miniphonic/response"
 require "miniphonic/api_object"
 require "miniphonic/production"
-require "faraday"
 
 module Miniphonic
   class << self
@@ -14,6 +16,8 @@ module Miniphonic
 
     def connect
       connection = Faraday.new(url: 'https://auphonic.com') do |con|
+        con.use FaradayMiddleware::ParseJson
+        con.use FaradayMiddleware::EncodeJson
         con.request :multipart
         con.adapter :net_http
       end

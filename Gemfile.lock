@@ -3,6 +3,8 @@ PATH
   specs:
     miniphonic (0.0.1)
       faraday
+      faraday_middleware
+      mime-types
       multi_json
 
 GEM
@@ -10,7 +12,10 @@ GEM
   specs:
     faraday (0.8.8)
       multipart-post (~> 1.2.0)
+    faraday_middleware (0.9.0)
+      faraday (>= 0.7.4, < 0.9)
     metaclass (0.0.1)
+    mime-types (1.25)
     mocha (0.14.0)
       metaclass (~> 0.0.1)
     multi_json (1.8.1)
