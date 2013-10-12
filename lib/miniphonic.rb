@@ -1,5 +1,6 @@
 require "miniphonic/version"
 require "miniphonic/response"
+require "miniphonic/api_object"
 require "faraday"
 
 module Miniphonic
