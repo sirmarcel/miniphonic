@@ -1,5 +1,6 @@
 require 'minitest/autorun'
 require 'miniphonic'
+require 'mocha/setup'
 
 begin
   require 'minitest/pride'
