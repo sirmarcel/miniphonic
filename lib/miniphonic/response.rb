@@ -4,20 +4,14 @@ require "multi_json"
 module Miniphonic 
   class Response
     extend Forwardable
-    attr_reader :response
+    attr_reader :response, :body, :data
 
     def initialize(response)
       @response = response
+      @body = MultiJson.load(@response.body)
+      @data = @body["data"]
     end
 
-    def body
-      @body ||= MultiJson.load(@response.body)
-    end
-
-    def data
-      @data ||= @body["data"]
-    end
-
-    def_delegators @response, :status, :success?
+    def_delegators :@response, :status, :success?
   end
 end
