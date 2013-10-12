@@ -38,14 +38,14 @@ module Miniphonic
 
       it 'should set uuid if successful' do
         ApiObject.any_instance.expects(:create_on_server).returns(@good_response)
-        @object.create_with_payload("")
+        @object.create_with_payload(nil)
         @object.uuid.must_equal("test")
       end
 
       it 'should raise an error if request fails' do
         ApiObject.any_instance.expects(:create_on_server).returns(@bad_response)
         lambda do
-          @object.create_with_payload("")
+          @object.create_with_payload(nil)
         end.must_raise(RuntimeError)
       end
     end
