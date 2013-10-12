@@ -29,7 +29,7 @@ module Miniphonic
        req.headers['Content-Type'] = 'application/json'
        req.body = MultiJson.dump(payload)
       end
-      Miniphonic::Response(response)
+      Miniphonic::Response.new(response)
     end
 
 
