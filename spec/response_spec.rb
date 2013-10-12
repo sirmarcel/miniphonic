@@ -11,12 +11,7 @@ module Miniphonic
           "test" => "toast"
         }
       }
-      stubs = Faraday::Adapter::Test::Stubs.new
-      stubs.get('/win'){[200, {}, MultiJson.dump(@response_body)]}
-      test = Faraday.new do |builder|
-        builder.adapter :test, stubs
-      end
-      raw_response = test.get '/win'
+      raw_response = stub_response(200, {}, @response_body)
       @response = Miniphonic::Response.new(raw_response)
     end
 
