@@ -24,7 +24,7 @@ module Miniphonic
 
     def create_on_server(payload, connection = Miniphonic.connect)
       response = connection.post do |req|
-       req.url '/api/#{ endpoint }.json'
+       req.url "/api/#{ endpoint }.json"
        req.headers['Content-Type'] = 'application/json'
        req.body = MultiJson.dump(payload)
       end

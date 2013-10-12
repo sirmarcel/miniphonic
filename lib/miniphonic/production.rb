@@ -1,5 +1,5 @@
 module Miniphonic
-  class Production
+  class Production < ApiObject
     def endpoint
       "productions"
     end
@@ -9,6 +9,7 @@ module Miniphonic
 
     def create
       payload = to_payload
+      create_with_payload(payload)
     end
   
     def to_payload

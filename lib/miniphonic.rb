@@ -1,6 +1,7 @@
 require "miniphonic/version"
 require "miniphonic/response"
 require "miniphonic/api_object"
+require "miniphonic/production"
 require "faraday"
 
 module Miniphonic
@@ -13,7 +14,7 @@ module Miniphonic
 
     def connect
       connection = Faraday.new(url: 'https://auphonic.com')
-      connection.basic_auth Auphonic.user, Auphonic.password
+      connection.basic_auth user, password
       connection
     end
   end
