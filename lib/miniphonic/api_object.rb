@@ -34,6 +34,14 @@ module Miniphonic
       "Error on server, responded #{ response.status } with message #{ response.body["error_message"]}."
     end
 
+    def post(url, payload = nil)
+      connection = Miniphonic.connect
+      raw_response = connection.post do |req|
+        req.url = url
+        req.body = payload
+      end
+      Miniphonic::Response.new(raw_response)
+    end
 
   end # class
 end # module
