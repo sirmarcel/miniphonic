@@ -2,6 +2,7 @@ require "faraday"
 require "faraday_middleware"
 
 require "miniphonic/version"
+require "miniphonic/helpers"
 require "miniphonic/response"
 require "miniphonic/api_object"
 require "miniphonic/production"

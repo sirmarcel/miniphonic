@@ -1,5 +1,6 @@
 module Miniphonic
   class ApiObject
+    include Miniphonic::Helpers
 
     attr_reader :uuid
     attr_accessor :meta
@@ -12,36 +13,20 @@ module Miniphonic
       raise NotImplementedError, "#create has to be overridden in #{ self.class.name }"
     end
 
-
     def create_with_payload(payload)
-      response = create_on_server(payload)
-      if response.success?
+      to_server("/api/#{ collection_endpoint }.json", payload) do |response|
         @uuid = response.data["uuid"]
-      else
-        raise error_message(response)
       end
     end
 
-    def create_on_server(payload, connection = Miniphonic.connect)
-      response = connection.post do |req|
-       req.url "/api/#{ endpoint }.json"
-       req.body = payload
-      end
-      Miniphonic::Response.new(response)
+    def command(command, payload = nil)
+      url = "/api/#{ endpoint }/#{ @uuid }/#{ command }.json"
+      to_server url, payload
     end
 
-    def error_message(response)
-      "Error on server, responded #{ response.status } with message #{ response.body["error_message"]}."
+    def collection_endpoint
+      endpoint + "s"
     end
-
-    def post(url, payload = nil)
-      connection = Miniphonic.connect
-      raw_response = connection.post do |req|
-        req.url = url
-        req.body = payload
-      end
-      Miniphonic::Response.new(raw_response)
-    end
-
+    
   end # class
 end # module
