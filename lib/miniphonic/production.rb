@@ -8,14 +8,6 @@ module Miniphonic
       "production"
     end
 
-    def initialize(uuid = nil)
-      @uuid = uuid
-    end
-
-    def create
-      create_with_payload(attributes_to_payload)
-    end
-  
     def upload(path)
       command :upload, path_to_payload(path)
     end
@@ -24,8 +16,8 @@ module Miniphonic
       command :start
     end
 
-    def set_output_files
-      command :output_files, self.output_files
+    def stop
+      command :stop
     end
 
   end

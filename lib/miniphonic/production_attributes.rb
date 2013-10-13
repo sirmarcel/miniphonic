@@ -1,7 +1,7 @@
 module Miniphonic
   module Attributes
     module Production
-      # Slightly tedious, but very non-magic way of defining all attributes for a production
+      # Slightly tedious, but very non-magic way of defining the API
 
       def metadata
         @metadata ||= {}
@@ -42,6 +42,11 @@ module Miniphonic
         payload[:input_file] = input_file if input_file
         payload[:multi_input_files] = multi_input_files unless multi_input_files.empty?
         payload
+      end
+
+      def payload_to_attributes(payload)
+        @metadata = payload["metadata"] if payload["metadata"]
+        # TODO etc.
       end
     end
   end
