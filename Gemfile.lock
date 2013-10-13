@@ -21,6 +21,7 @@ GEM
     multi_json (1.8.1)
     multipart-post (1.2.0)
     rake (10.1.0)
+    vcr (2.6.0)
 
 PLATFORMS
   ruby
@@ -30,3 +31,4 @@ DEPENDENCIES
   miniphonic!
   mocha
   rake
+  vcr
