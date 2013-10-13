@@ -38,7 +38,6 @@ module Miniphonic
     def get_attributes
       from_server single_url do |response|
         payload_to_attributes(response.data)
-        puts response.data["status"] if response.data["status"]
       end
     end
 
