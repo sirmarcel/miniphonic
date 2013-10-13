@@ -1,4 +1,4 @@
-require "multi_json"
+require 'forwardable'
 
 # Proxy for a Faraday::Response
 module Miniphonic 
