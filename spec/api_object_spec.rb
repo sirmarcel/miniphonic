@@ -14,57 +14,60 @@ module Miniphonic
     end
 
     describe '#create' do
+      
       it 'should raise an error if no create method is defined' do
         lambda do
           ApiObject.new.create
         end.must_raise(NotImplementedError)
+      
       end
     end
 
     describe '#create_with_payload' do
+      
       before do
-        good_body = {
+        @test_object = ApiObject.new
+        @test_object.stubs(:endpoint).returns("test")
+        @payload = { "test" => "bar" }
+        @good_response_body = {
           "data" => {
             "uuid" => "test"
           }
         }
-        bad_body = {
-          "error_message" => "trololo"
-        }
-        @good_response = Miniphonic::Response.new(stub_response(200, {}, good_body))
-        @bad_response = Miniphonic::Response.new(stub_response(404, {}, bad_body))
-        @object = ApiObject.new
+        @good_response = stub_response(200, {}, @good_response_body)
+      end
+      
+      it 'should run to_server with the right arguments' do
+        @test_object.expects(:to_server).with("/api/tests.json",@payload)
+        @test_object.create_with_payload(@payload)
       end
 
-      it 'should set uuid if successful' do
-        ApiObject.any_instance.expects(:create_on_server).returns(@good_response)
-        @object.create_with_payload(nil)
-        @object.uuid.must_equal("test")
+      it 'should set self.uuid on success' do
+        # TODO: More cleverly mock to_server
+        connection = stub
+        Miniphonic.stubs(:connect).returns(connection)
+        connection.stubs(:post).returns(@good_response)
+        @test_object.create_with_payload(@payload)
+        @test_object.uuid.must_equal("test")
       end
 
-      it 'should raise an error if request fails' do
-        ApiObject.any_instance.expects(:create_on_server).returns(@bad_response)
-        lambda do
-          @object.create_with_payload(nil)
-        end.must_raise(RuntimeError)
-      end
     end
 
-    describe '#create_on_server' do
+    describe '#command' do
 
       before do
-        @object = ApiObject.new
-        @object.stubs(:endpoint).returns("test")
-        @connection = mock
-        @response = stub_response(200, {})
+        @payload = { "test" => "bar" }
+        @test_object = ApiObject.new
+        @test_object.stubs(:endpoint).returns("test_endpoint")
+        @test_object.stubs(:uuid).returns("test_uuid")
+        @command = "test_command"
       end
 
-      it 'should post' do
-        @connection.expects(:post).returns(@response)
-        @object.create_on_server({}, @connection)
+      it 'should run to_server with the right data' do
+        @test_object.expects(:to_server).with("/api/test_endpoint/test_uuid/test_command.json", @payload)
+        @test_object.command( @command, @payload )
       end
 
-      # TODO: Actually mock a real connection and verify the sent data. That is, however, beyond my powers.
     end
 
   end
