@@ -2,7 +2,7 @@ module Miniphonic
   class ApiObject
     include Miniphonic::Helpers
 
-    attr_reader :uuid
+    attr_accessor :uuid
     attr_accessor :meta
 
     def endpoint
@@ -15,12 +15,12 @@ module Miniphonic
 
     def create_with_payload(payload)
       to_server("/api/#{ collection_endpoint }.json", payload) do |response|
-        @uuid = response.data["uuid"]
+        self.uuid = response.data["uuid"]
       end
     end
 
     def command(command, payload = nil)
-      url = "/api/#{ endpoint }/#{ @uuid }/#{ command }.json"
+      url = "/api/#{ endpoint }/#{ self.uuid }/#{ command }.json"
       to_server url, payload
     end
 
