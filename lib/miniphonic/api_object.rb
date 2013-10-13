@@ -3,13 +3,16 @@ module Miniphonic
     include Miniphonic::Helpers
 
     attr_accessor :uuid
-    attr_accessor :meta
 
     def endpoint
       raise NotImplementedError, "#endpoint has to be overridden in #{ self.class.name }"
     end
 
     def create
+      raise NotImplementedError, "#create has to be overridden in #{ self.class.name }"
+    end
+
+    def attributes_to_payload
       raise NotImplementedError, "#create has to be overridden in #{ self.class.name }"
     end
 
@@ -27,6 +30,10 @@ module Miniphonic
     def collection_endpoint
       endpoint + "s"
     end
-    
+
+    def data
+      @data ||= {}
+    end
+
   end # class
 end # module

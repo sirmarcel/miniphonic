@@ -13,11 +13,11 @@ module Miniphonic
       end
     end
 
-    describe '#create' do
+    describe '#attributes_to_payload' do
       
-      it 'should raise an error if no create method is defined' do
+      it 'should raise an error if no attributes_to_payload method is defined' do
         lambda do
-          ApiObject.new.create
+          ApiObject.new.attributes_to_payload
         end.must_raise(NotImplementedError)
       
       end

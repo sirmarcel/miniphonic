@@ -1,22 +1,19 @@
+require_relative 'production_attributes'
+
 module Miniphonic
   class Production < ApiObject
+    include Attributes::Production
+
     def endpoint
       "production"
     end
 
-    attr_accessor :preset
-    attr_accessor :meta
-    attr_accessor :outfiles
-    attr_reader :uuid
-
     def initialize(uuid = nil)
       @uuid = uuid
-      @outfiles = []
-      @meta = []
     end
 
     def create
-      create_with_payload(to_payload)
+      create_with_payload(attributes_to_payload)
     end
   
     def upload(path)
@@ -27,15 +24,8 @@ module Miniphonic
       command :start
     end
 
-    def set_outfiles
-      command :output_files, @outfiles
-    end
-
-    def to_payload
-      payload = {}
-      payload["preset"] = @preset if @preset
-      payload["metadata"] = @meta
-      payload
+    def set_output_files
+      command :output_files, self.output_files
     end
 
   end
