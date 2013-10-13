@@ -46,10 +46,9 @@ module Miniphonic
     end
 
     def set_outfiles
-      payload = MultiJson.dump(@outfiles)
+      payload = @outfiles
       response = Miniphonic.connect.post "/api/production/#{ @uuid }/output_files.json" do |req|
         req.url "/api/production/#{ @uuid }/output_files.json"
-        req.headers['Content-Type'] = 'application/json'
         req.body = payload
       end
       response = Miniphonic::Response.new(response)
