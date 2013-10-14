@@ -1,14 +1,14 @@
 require 'minitest/autorun'
 require 'miniphonic'
 require 'mocha/setup'
-require 'webmock/minitest'
-require 'vcr'
+# require 'webmock/minitest'
+# require 'vcr'
 
-VCR.configure do |c|
-      c.cassette_library_dir = 'fixtures/vcr_cassettes'
-      c.hook_into :faraday
-      c.stub_with :webmock
-  end
+# VCR.configure do |c|
+#       c.cassette_library_dir = 'fixtures/vcr_cassettes'
+#       c.hook_into :faraday
+#       c.stub_with :webmock
+#   end
 
 begin
   require 'minitest/pride'
@@ -18,7 +18,7 @@ end
 
 def stub_response(status, headers, body = {})
   stubs = create_stub_adapter
-  stubs.get('/'){[status, headers, MultiJson.dump(body)]}
+  stubs.get('/'){[status, headers, body]}
   test = Faraday.new do |builder|
     builder.use FaradayMiddleware::ParseJson
     builder.use FaradayMiddleware::EncodeJson

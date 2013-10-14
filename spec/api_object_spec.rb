@@ -23,34 +23,76 @@ module Miniphonic
       end
     end
 
-    describe '#create_with_payload' do
+    describe '#payload_to_attributes' do
+      
+      it 'should raise an error if no payload_to_attributes method is defined' do
+        lambda do
+          ApiObject.new.payload_to_attributes({})
+        end.must_raise(NotImplementedError)
+      
+      end
+
+    end
+
+    describe '#initialize' do
+    
+      it 'should initialize object with uuid' do
+        ApiObject.new("test").uuid.must_equal("test")
+      end
+      
+    end
+
+    describe '#create' do
       
       before do
         @test_object = ApiObject.new
-        @test_object.stubs(:endpoint).returns("test")
+        @test_object.stubs(:collection_url).returns("test")
         @payload = { "test" => "bar" }
+        @collection_url = "/api/test"
         @good_response_body = {
           "data" => {
             "uuid" => "test"
           }
         }
         @good_response = stub_response(200, {}, @good_response_body)
+
+        # Stub to_server interna (not very elegantly)
+        @connection = stub
+        Miniphonic.stubs(:connect).returns(@connection)
+        @connection.stubs(:post).returns(@good_response)
       end
       
       it 'should run to_server with the right arguments' do
-        @test_object.expects(:to_server).with("/api/tests.json",@payload)
-        @test_object.create_with_payload(@payload)
+        @test_object.stubs(:collection_url).returns(@collection_url)
+        @test_object.stubs(:attributes_to_payload).returns(@payload)
+        @test_object.expects(:to_server).with(@collection_url,@payload)
+        @test_object.create
       end
 
       it 'should set self.uuid on success' do
-        # TODO: More cleverly mock to_server
-        connection = stub
-        Miniphonic.stubs(:connect).returns(connection)
-        connection.stubs(:post).returns(@good_response)
-        @test_object.create_with_payload(@payload)
+        @test_object.stubs(:collection_url).returns(@collection_url)
+        @test_object.stubs(:attributes_to_payload).returns(@payload)
+        @test_object.create
         @test_object.uuid.must_equal("test")
       end
 
+    end
+
+    describe '#update' do
+    
+      before do
+        @test_object = ApiObject.new
+        @payload = {test: "foo"}
+        @url = "/test"
+        @test_object.stubs(:attributes_to_payload).returns(@payload)
+        @test_object.stubs(:single_url).returns(@url)
+      end
+
+      it 'should call to_server with the right data' do
+        @test_object.expects(:to_server).with(@url, @payload)
+        @test_object.update
+      end
+      
     end
 
     describe '#command' do
@@ -68,6 +110,34 @@ module Miniphonic
         @test_object.command( @command, @payload )
       end
 
+    end
+
+    describe '#get_attributes' do
+    
+      before do
+        @single_url = "/api/test"
+        @data_on_server = {test: "toast"}
+        @response_body = {
+          "data" => @data_on_server
+        }
+
+        @test_object = ApiObject.new
+        @test_object.stubs(:single_url).returns(@single_url)
+        
+        
+        @response = stub_response(200, {}, @response_body)
+
+        # Stub from_server interna (not very elegantly)
+        @connection = stub
+        Miniphonic.stubs(:connect).returns(@connection)
+        @connection.stubs(:get).returns(@response)
+      end
+
+      it 'should pass data from server to attributes_to_payload' do
+        @test_object.expects(:payload_to_attributes).with(@data_on_server)
+        @test_object.get_attributes
+      end
+      
     end
 
   end

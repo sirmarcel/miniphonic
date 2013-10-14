@@ -13,6 +13,10 @@ module Miniphonic
       raise NotImplementedError, "#create has to be overridden in #{ self.class.name }"
     end
 
+    def payload_to_attributes(payload)
+      raise NotImplementedError, "#attributes_to_payload has to be overridden in #{ self.class.name }"
+    end
+
     def initialize(uuid = nil)
       @uuid = uuid
     end
