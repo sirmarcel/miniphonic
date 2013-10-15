@@ -7,6 +7,8 @@ module Miniphonic
         @metadata ||= {}
       end
 
+      attr_accessor :preset
+
       attr_accessor :output_basename
 
       def output_files
@@ -26,6 +28,7 @@ module Miniphonic
       end
 
       attr_accessor :input_file
+      attr_accessor :service
 
       def multi_input_files
         @multi_input_files ||= []
@@ -34,12 +37,14 @@ module Miniphonic
       def attributes_to_payload
         payload = {}
         payload[:metadata] = metadata unless metadata.empty?
+        payload[:preset] = preset if preset
         payload[:output_basename] = output_basename if output_basename
         payload[:output_files] = output_files unless output_files.empty?
         payload[:outgoing_services] = outgoing_services unless outgoing_services.empty?
         payload[:algorithms] = algorithms unless algorithms.empty?
         payload[:chapters] = chapters unless chapters.empty?
         payload[:input_file] = input_file if input_file
+        payload[:service] = service if service
         payload[:multi_input_files] = multi_input_files unless multi_input_files.empty?
         payload
       end
