@@ -14,7 +14,7 @@ module Miniphonic
 
     # If your file is on a service registered with Auphonic,
     # use this to not have to upload by hand.
-    
+
     def create_with_file_from_service(filename, service)
       self.input_file = filename
       self.service = service
