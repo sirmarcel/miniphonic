@@ -2,33 +2,25 @@ require 'mime/types'
 
 module Miniphonic::Helpers
 
-  # TODO: abstract to and from server into something like "request(verb, url, payload)"
-  # Problem: Passing the blocks around in a performing way (&block is sloooow)
-
   # Posts data to the server and executes a given block on success
-  def to_server(url, payload = {})
+  def to_server(url, payload = {}, &block)
     connection = Miniphonic.connect
-
     raw_response = connection.post url, payload
-    response = Miniphonic::Response.new(raw_response)
-
-    if response.success?
-      yield(response) if block_given?
-      response
-    else
-      raise server_error(response)
-    end
+    handle_response(raw_response, &block)
   end
 
   # Gets data from the server and executes a given block on success
-  def from_server(url, payload = {})
+  def from_server(url, payload = {}, &block)
     connection = Miniphonic.connect
-    
     raw_response = connection.get url, payload
-    response = Miniphonic::Response.new(raw_response)
+    handle_response(raw_response, &block)
+  end
 
+  def handle_response(raw_response, &block)
+    response = Miniphonic::Response.new(raw_response)
+    
     if response.success?
-      yield(response) if block_given?
+      block.call(response) if block
       response
     else
       raise server_error(response)
