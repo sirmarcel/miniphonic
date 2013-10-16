@@ -3,6 +3,6 @@ require 'rake/testtask'
 
 Rake::TestTask.new do |test|
   test.name = 'spec'
-  test.pattern = 'spec/**/*_spec.rb'
+  test.pattern = 'test/spec/**/*_spec.rb'
   test.verbose = true
 end
