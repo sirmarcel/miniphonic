@@ -45,6 +45,11 @@ module Miniphonic
       end
     end
 
+    # Delete API object from server    
+    def delete
+      delete_from_server single_url
+    end
+
     def command(command, payload = nil)
       url = command_url(command)
       to_server url, payload

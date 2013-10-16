@@ -16,9 +16,16 @@ module Miniphonic::Helpers
     handle_response(raw_response, &block)
   end
 
+  # Deletes data from the server and executes a given block on success
+  def delete_from_server(url, payload = {}, &block)
+    connection = Miniphonic.connect
+    raw_response = connection.delete url, payload
+    handle_response(raw_response, &block)
+  end
+
   def handle_response(raw_response, &block)
     response = Miniphonic::Response.new(raw_response)
-    
+
     if response.success?
       block.call(response) if block
       response
