@@ -48,6 +48,6 @@ module Miniphonic::Helpers
   end
 
   def server_error(response)
-    "Error on server, responded #{ response.status } with message #{ response.body["error_message"]}."
+    return ServerSideError, "Error on server, responded #{ response.status } with message #{ response.body["error_message"]}."
   end
 end
