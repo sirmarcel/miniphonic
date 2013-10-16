@@ -60,7 +60,7 @@ module Miniphonic
     describe '#upload' do
     
       before do
-        VCR.insert_cassette 'upload', :match_requests_on => [:body, :uri]
+        VCR.insert_cassette 'upload', :match_requests_on => [:uri]
         @production = Miniphonic::Production.new
         @production.create
       end
@@ -74,6 +74,26 @@ module Miniphonic
         reponse.success?.must_equal(true)
       end
 
+    end
+
+    describe '#start' do
+    
+      it 'must run the start command' do
+        @production = Production.new
+        @production.expects(:command).with(:start)
+        @production.start
+      end
+      
+    end
+
+    describe '#stop' do
+    
+      it 'must run the stop command' do
+        @production = Production.new
+        @production.expects(:command).with(:stop)
+        @production.stop
+      end
+      
     end
     
   end
