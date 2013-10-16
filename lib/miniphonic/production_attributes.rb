@@ -50,8 +50,16 @@ module Miniphonic
       end
 
       def payload_to_attributes(payload)
-        @metadata = payload["metadata"] if payload["metadata"]
-        # TODO etc.
+        @metadata = payload["metadata"]
+        @preset = payload["preset"]
+        @output_basename = payload["output_basename"]
+        @output_files = payload["output_files"]
+        @outgoing_services = payload["outgoing_services"]
+        @algorithms = payload["algorithms"]
+        @chapters = payload["chapters"]
+        @input_file = payload["input_file"]
+        @service = payload["service"]
+        @multi_input_files = payload["multi_input_files"]
       end
     end
   end
