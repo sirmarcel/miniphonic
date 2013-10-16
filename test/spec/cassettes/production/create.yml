@@ -1,0 +1,118 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://auphonic.com/api/productions.json
+    body:
+      encoding: UTF-8
+      string: '{}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      Authorization:
+      - Basic c2lybWFyY2VsOm5hYy1kaWQtY2lkLXlvZC1qYS1zaGxlai15dWwteQ==
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - nginx/1.2.0
+      date:
+      - Wed, 16 Oct 2013 14:19:50 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      cache-control:
+      - max-age=0
+      vary:
+      - Authorization
+      expires:
+      - Wed, 16 Oct 2013 14:19:50 GMT
+      last-modified:
+      - Wed, 16 Oct 2013 14:19:50 GMT
+      access-control-allow-origin:
+      - '*'
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Authorization,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+            "status_code": 200,
+            "form_errors": {},
+            "error_code": null,
+            "error_message": "",
+            "data": {
+                "status_string": "Incomplete Form",
+                "image": null,
+                "creation_time": "2013-10-16T14:19:50.197Z",
+                "chapters": [],
+                "edit_page": "https://auphonic.com/engine/upload/edit/ngq7AvNZQuWZZ3dVmGSzk9",
+                "channels": null,
+                "warning_message": "",
+                "samplerate": null,
+                "output_files": [],
+                "uuid": "ngq7AvNZQuWZZ3dVmGSzk9",
+                "service": null,
+                "warning_status": null,
+                "has_video": false,
+                "error_status": null,
+                "thumbnail": null,
+                "metadata": {
+                    "album": "",
+                    "publisher": "",
+                    "subtitle": "",
+                    "license": "",
+                    "artist": "",
+                    "track": "",
+                    "title": "",
+                    "summary": "",
+                    "append_chapters": false,
+                    "url": "",
+                    "license_url": "",
+                    "location": {
+                        "latitude": null,
+                        "longitude": null
+                    },
+                    "year": "",
+                    "genre": "",
+                    "tags": [
+                        ""
+                    ]
+                },
+                "status": 9,
+                "input_file": "",
+                "status_page": "https://auphonic.com/engine/status/ngq7AvNZQuWZZ3dVmGSzk9",
+                "length_timestring": "",
+                "multi_input_files": [],
+                "bitrate": null,
+                "output_basename": "",
+                "outgoing_services": [],
+                "change_time": "2013-10-16T14:19:50.197Z",
+                "error_message": "",
+                "waveform_image": null,
+                "length": 0,
+                "algorithms": {
+                    "normloudness": true,
+                    "loudnesstarget": -16,
+                    "denoise": false,
+                    "denoiseamount": 0,
+                    "hipfilter": true,
+                    "leveler": true
+                },
+                "start_allowed": false,
+                "change_allowed": true,
+                "format": ""
+            }
+        }
+    http_version: 
+  recorded_at: Wed, 16 Oct 2013 14:19:55 GMT
+recorded_with: VCR 2.6.0
