@@ -8,6 +8,9 @@ require "miniphonic/api_object"
 require "miniphonic/production"
 
 module Miniphonic
+  class UuidError < StandardError
+  end
+
   class << self
     attr_accessor :user, :password
 

@@ -140,5 +140,25 @@ module Miniphonic
       
     end
 
+    describe '#single_url' do
+    
+      it 'must raise error if no uuid is present' do
+        lambda do
+          Production.new.single_url
+        end.must_raise(UuidError)
+      end
+      
+    end
+
+    describe '#command_url' do
+    
+      it 'must raise error if no uuid is present' do
+        lambda do
+          Production.new.command_url("")
+        end.must_raise(UuidError)
+      end
+      
+    end
+
   end
 end

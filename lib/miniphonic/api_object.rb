@@ -66,10 +66,12 @@ module Miniphonic
     end
 
     def single_url
+      raise UuidError unless self.uuid
       "/api/#{ endpoint }/#{ self.uuid }.json"
     end
 
     def command_url(command)
+      raise UuidError unless self.uuid
       "/api/#{ endpoint }/#{ self.uuid }/#{ command }.json"
     end
 
