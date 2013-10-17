@@ -45,6 +45,10 @@ module Miniphonic
       end
     end
 
+    def upload_cover(path)
+      command :upload, path_to_payload(path, :image)
+    end
+
     # Delete API object from server    
     def delete
       delete_from_server single_url
