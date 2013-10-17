@@ -37,10 +37,10 @@ module Miniphonic
 
     end
 
-    describe '#upload_file_from_service' do
+    describe '#upload_audio_from_service' do
     
       before do
-        VCR.insert_cassette 'upload_file_from_service', :match_requests_on => [:body, :uri]
+        VCR.insert_cassette 'upload_audio_from_service', :match_requests_on => [:body, :uri]
         @production = Production.new
         @production.create
         @test_file = "test.m4a"
@@ -52,7 +52,7 @@ module Miniphonic
       end
 
       it 'must add an input file from an external service' do
-        response = @production.upload_file_from_service(@test_file, @service_uuid)
+        response = @production.upload_audio_from_service(@test_file, @service_uuid)
         response.success?.must_equal(true)
       end
     end

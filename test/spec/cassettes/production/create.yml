@@ -21,7 +21,7 @@ http_interactions:
       server:
       - nginx/1.2.0
       date:
-      - Thu, 17 Oct 2013 20:59:40 GMT
+      - Thu, 17 Oct 2013 21:42:32 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -33,9 +33,9 @@ http_interactions:
       vary:
       - Authorization
       expires:
-      - Thu, 17 Oct 2013 20:59:40 GMT
+      - Thu, 17 Oct 2013 21:42:32 GMT
       last-modified:
-      - Thu, 17 Oct 2013 20:59:40 GMT
+      - Thu, 17 Oct 2013 21:42:32 GMT
       access-control-allow-origin:
       - '*'
       access-control-allow-credentials:
@@ -53,14 +53,14 @@ http_interactions:
             "data": {
                 "status_string": "Incomplete Form",
                 "image": null,
-                "creation_time": "2013-10-17T20:59:39.829Z",
+                "creation_time": "2013-10-17T21:42:32.360Z",
                 "chapters": [],
-                "edit_page": "https://auphonic.com/engine/upload/edit/SjRqGhxKhK448Gs6AgAzcZ",
+                "edit_page": "https://auphonic.com/engine/upload/edit/pXuK2U59CEhmzz4CyDaMg5",
                 "channels": null,
                 "warning_message": "",
                 "samplerate": null,
                 "output_files": [],
-                "uuid": "SjRqGhxKhK448Gs6AgAzcZ",
+                "uuid": "pXuK2U59CEhmzz4CyDaMg5",
                 "service": null,
                 "warning_status": null,
                 "has_video": false,
@@ -90,13 +90,13 @@ http_interactions:
                 },
                 "status": 9,
                 "input_file": "",
-                "status_page": "https://auphonic.com/engine/status/SjRqGhxKhK448Gs6AgAzcZ",
+                "status_page": "https://auphonic.com/engine/status/pXuK2U59CEhmzz4CyDaMg5",
                 "length_timestring": "",
                 "multi_input_files": [],
                 "bitrate": null,
                 "output_basename": "",
                 "outgoing_services": [],
-                "change_time": "2013-10-17T20:59:39.829Z",
+                "change_time": "2013-10-17T21:42:32.360Z",
                 "error_message": "",
                 "waveform_image": null,
                 "length": 0,
@@ -114,5 +114,5 @@ http_interactions:
             }
         }
     http_version: 
-  recorded_at: Thu, 17 Oct 2013 20:59:46 GMT
+  recorded_at: Thu, 17 Oct 2013 21:42:39 GMT
 recorded_with: VCR 2.6.0
