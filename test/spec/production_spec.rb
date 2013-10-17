@@ -3,6 +3,14 @@ require_relative 'helper'
 module Miniphonic
 
   describe Production do
+
+    describe '#endpoint' do
+    
+      it 'must define the right endpoint' do
+        Production.new.endpoint.must_equal("production")
+      end
+      
+    end
   
     before do
       require 'vcr'
