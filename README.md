@@ -90,6 +90,11 @@ production.start
 production.stop
 ```
 
+### Presets
+
+Presets have a lot less fancy methods than productions, but they work pretty much the same. 
+One caveat: You can't create presets without setting ```preset.name``` first.
+
 ***
 
 Refer to the [API docs]( https://auphonic.com/api-docs/details.html ), the specs and the appropriate classes for further information. 
