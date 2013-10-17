@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Miniphonic::VERSION
   spec.authors       = ["sirmarcel"]
   spec.email         = ["me@lumenlog.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = %q{Miniphonic is a wrapper for the Auphonic.com API}
+  spec.summary       = %q{Exposes the Auphonic API in Ruby, for audio processing bliss.}
+  spec.homepage      = "https://github.com/sirmarcel/miniphonic"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
