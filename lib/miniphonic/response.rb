@@ -1,16 +1,5 @@
-require 'forwardable'
-
-# Proxy for a Faraday::Response
-module Miniphonic 
-  class Response
-    extend Forwardable
-    attr_reader :response, :body, :data
-
-    def initialize(response)
-      @response = response
-      @data = response.body["data"]
-    end
-
-    def_delegators :@response, :status, :success?, :body
+class Faraday::Response
+  def data
+    body["data"] if body
   end
 end

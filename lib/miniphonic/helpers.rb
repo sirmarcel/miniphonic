@@ -5,15 +5,15 @@ module Miniphonic::Helpers
   # Posts data to the server and executes a given block on success
   def to_server(url, payload = {}, &block)
     connection = Miniphonic.connect
-    raw_response = connection.post url, payload
-    handle_response(raw_response, &block)
+    response = connection.post url, payload
+    handle_response(response, &block)
   end
 
   # Gets data from the server and executes a given block on success
   def from_server(url, payload = {}, &block)
     connection = Miniphonic.connect
-    raw_response = connection.get url, payload
-    handle_response(raw_response, &block)
+    response = connection.get url, payload
+    handle_response(response, &block)
   end
 
   # Deletes data from the server and executes a given block on success
@@ -28,9 +28,7 @@ module Miniphonic::Helpers
     end
   end
 
-  def handle_response(raw_response, &block)
-    response = Miniphonic::Response.new(raw_response)
-
+  def handle_response(response, &block)
     if response.success?
       block.call(response) if block
       response
