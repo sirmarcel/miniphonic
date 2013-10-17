@@ -6,7 +6,7 @@ module Miniphonic
   describe ApiObject do
     
     describe '#endpoint' do
-      it 'should raise an error if no endpoint is defined' do
+      it 'must raise an error if no endpoint is defined' do
         lambda do
           ApiObject.new.endpoint
         end.must_raise(NotImplementedError)
@@ -15,7 +15,7 @@ module Miniphonic
 
     describe '#attributes_to_payload' do
       
-      it 'should raise an error if no attributes_to_payload method is defined' do
+      it 'must raise an error if no attributes_to_payload method is defined' do
         lambda do
           ApiObject.new.attributes_to_payload
         end.must_raise(NotImplementedError)
@@ -25,7 +25,7 @@ module Miniphonic
 
     describe '#payload_to_attributes' do
       
-      it 'should raise an error if no payload_to_attributes method is defined' do
+      it 'must raise an error if no payload_to_attributes method is defined' do
         lambda do
           ApiObject.new.payload_to_attributes({})
         end.must_raise(NotImplementedError)
@@ -36,7 +36,7 @@ module Miniphonic
 
     describe '#initialize' do
     
-      it 'should initialize object with uuid' do
+      it 'must initialize object with uuid' do
         ApiObject.new("test").uuid.must_equal("test")
       end
       
@@ -62,14 +62,14 @@ module Miniphonic
         @connection.stubs(:post).returns(@good_response)
       end
       
-      it 'should run to_server with the right arguments' do
+      it 'must run to_server with the right arguments' do
         @test_object.stubs(:collection_url).returns(@collection_url)
         @test_object.stubs(:attributes_to_payload).returns(@payload)
         @test_object.expects(:to_server).with(@collection_url,@payload)
         @test_object.create
       end
 
-      it 'should set self.uuid on success' do
+      it 'must set self.uuid on success' do
         @test_object.stubs(:collection_url).returns(@collection_url)
         @test_object.stubs(:attributes_to_payload).returns(@payload)
         @test_object.create
@@ -88,7 +88,7 @@ module Miniphonic
         @test_object.stubs(:single_url).returns(@url)
       end
 
-      it 'should call to_server with the right data' do
+      it 'must call to_server with the right data' do
         @test_object.expects(:to_server).with(@url, @payload)
         @test_object.update
       end
@@ -105,7 +105,7 @@ module Miniphonic
         @command = "test_command"
       end
 
-      it 'should run to_server with the right data' do
+      it 'must run to_server with the right data' do
         @test_object.expects(:to_server).with("/api/test_endpoint/test_uuid/test_command.json", @payload)
         @test_object.command( @command, @payload )
       end
@@ -133,7 +133,7 @@ module Miniphonic
         @connection.stubs(:get).returns(@response)
       end
 
-      it 'should pass data from server to attributes_to_payload' do
+      it 'must pass data from server to attributes_to_payload' do
         @test_object.expects(:payload_to_attributes).with(@data_on_server)
         @test_object.get_attributes
       end
