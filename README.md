@@ -1,6 +1,6 @@
 # Miniphonic
 
-TODO: Write a gem description
+Miniphonic is a small Ruby wrapper for the [auphonic]( https://auphonic.com ) API.
 
 ## Installation
 
@@ -27,34 +27,13 @@ Miniphonic.configure do |m|
 end
 ```
 
-Create a production
+You can then create an empty API object:
+
 ```
 production = Miniphonic::Production.new
-production.create
 ```
 
-Run a production
-```
-production.start
-```
-
-Example:
-```
-require 'miniphonic'
-
-Miniphonic.configure do |m|
-  m.user = "user"
-  m.password = "much secret wow"
-end
-
-production = Miniphonic::Production.new
-production.meta = {"title" => "Wheee"}
-production.outfiles << { "format" => "mp3" }
-production.create
-production.set_outfiles
-production.upload("test.m4a")
-production.start
-```
+Alternatively, supply a uuid and run ```object.get_attributes``` to pull data from auphonic.
 
 
 ## Contributing
