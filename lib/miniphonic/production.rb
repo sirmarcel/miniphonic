@@ -23,7 +23,7 @@ module Miniphonic
 
     def upload_file_from_service(filename, service)
       self.input_file = filename
-      self.service = service
+      self.upload_service = service
       update
     end
 

@@ -28,7 +28,7 @@ module Miniphonic
       end
 
       attr_accessor :input_file
-      attr_accessor :service
+      attr_accessor :upload_service
 
       def multi_input_files
         @multi_input_files ||= []
@@ -44,7 +44,7 @@ module Miniphonic
         payload[:algorithms] = algorithms unless algorithms.empty?
         payload[:chapters] = chapters unless chapters.empty?
         payload[:input_file] = input_file if input_file
-        payload[:service] = service if service
+        payload[:service] = upload_service if upload_service
         payload[:multi_input_files] = multi_input_files unless multi_input_files.empty?
         payload
       end
@@ -58,7 +58,7 @@ module Miniphonic
         @algorithms = payload["algorithms"]
         @chapters = payload["chapters"]
         @input_file = payload["input_file"]
-        @service = payload["service"]
+        @upload_service = payload["service"]
         @multi_input_files = payload["multi_input_files"]
       end
     end
