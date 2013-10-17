@@ -1,4 +1,4 @@
-require_relative 'production_attributes'
+require_relative 'preset_attributes'
 
 module Miniphonic
   class Preset < ApiObject
