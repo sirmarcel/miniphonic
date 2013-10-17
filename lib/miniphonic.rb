@@ -6,6 +6,7 @@ require "miniphonic/helpers"
 require "miniphonic/response"
 require "miniphonic/api_object"
 require "miniphonic/production"
+require "miniphonic/preset"
 
 module Miniphonic
   class UuidError < StandardError
