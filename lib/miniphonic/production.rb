@@ -12,6 +12,10 @@ module Miniphonic
       command :upload, path_to_payload(path, :input_file)
     end
 
+    def upload_cover(path)
+      command :upload, path_to_payload(path, :image)
+    end
+
     # If your file is on a service registered with Auphonic,
     # use this to not have to upload by hand.
 

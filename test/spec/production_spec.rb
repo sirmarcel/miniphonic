@@ -76,6 +76,25 @@ module Miniphonic
 
     end
 
+    describe '#upload_cover' do
+    
+      before do
+        VCR.insert_cassette 'upload_cover', :match_requests_on => [:uri]
+        @production = Miniphonic::Production.new
+        @production.create
+      end
+
+      after do
+        VCR.eject_cassette
+      end
+
+      it 'must upload a local image file' do
+        reponse = @production.upload_cover("test/spec/data/test.jpg")
+        reponse.success?.must_equal(true)
+      end
+
+    end
+
     describe '#start' do
 
       before do
