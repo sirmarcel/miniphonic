@@ -1,0 +1,97 @@
+---
+http_interactions:
+- request:
+    method: post
+    uri: https://auphonic.com/api/presets.json
+    body:
+      encoding: UTF-8
+      string: '{"preset_name":"Test Preset"}'
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      Authorization:
+      - Basic c2lybWFyY2VsOm5hYy1kaWQtY2lkLXlvZC1qYS1zaGxlai15dWwteQ==
+      Content-Type:
+      - application/json
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - nginx/1.2.0
+      date:
+      - Thu, 17 Oct 2013 22:08:49 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      cache-control:
+      - max-age=0
+      vary:
+      - Authorization
+      expires:
+      - Thu, 17 Oct 2013 22:08:49 GMT
+      last-modified:
+      - Thu, 17 Oct 2013 22:08:49 GMT
+      access-control-allow-origin:
+      - '*'
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Authorization,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+            "status_code": 200,
+            "form_errors": {},
+            "error_code": null,
+            "error_message": "",
+            "data": {
+                "outgoing_services": [],
+                "uuid": "RQSWVCGqsKwic3Ga2HEKrD",
+                "output_files": [],
+                "preset_name": "Test Preset",
+                "creation_time": "2013-10-17T22:08:49.519Z",
+                "metadata": {
+                    "album": "",
+                    "publisher": "",
+                    "subtitle": "",
+                    "license": "",
+                    "artist": "",
+                    "track": "",
+                    "title": "",
+                    "summary": "",
+                    "append_chapters": false,
+                    "url": "",
+                    "license_url": "",
+                    "location": {
+                        "latitude": null,
+                        "longitude": null
+                    },
+                    "year": "",
+                    "genre": "",
+                    "tags": [
+                        ""
+                    ]
+                },
+                "algorithms": {
+                    "normloudness": true,
+                    "loudnesstarget": -16,
+                    "denoise": false,
+                    "denoiseamount": 0,
+                    "hipfilter": true,
+                    "leveler": true
+                },
+                "image": null,
+                "multi_input_files": [],
+                "thumbnail": null,
+                "output_basename": ""
+            }
+        }
+    http_version: 
+  recorded_at: Thu, 17 Oct 2013 22:08:56 GMT
+recorded_with: VCR 2.6.0
