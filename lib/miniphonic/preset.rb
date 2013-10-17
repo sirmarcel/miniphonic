@@ -8,5 +8,10 @@ module Miniphonic
       "preset"
     end
 
+    def create
+      raise PresetNameError, "You can't create a preset without setting preset.name first." unless name
+      super
+    end
+
   end
 end

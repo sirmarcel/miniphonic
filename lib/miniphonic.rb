@@ -13,6 +13,8 @@ module Miniphonic
   end
   class ServerSideError < StandardError
   end
+  class PresetNameError < StandardError
+  end
 
   class << self
     attr_accessor :user, :password

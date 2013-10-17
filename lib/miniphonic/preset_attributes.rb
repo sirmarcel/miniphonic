@@ -3,7 +3,7 @@ module Miniphonic
     module Preset
       # Slightly tedious, but very non-magic way of defining the API
 
-      attr_accessor :preset_name
+      attr_accessor :name
 
       def metadata
         @metadata ||= {}
@@ -29,7 +29,7 @@ module Miniphonic
 
       def attributes_to_payload
         payload = {}
-        payload[:preset_name] = preset_name if preset_name
+        payload[:preset_name] = name if name
         payload[:metadata] = metadata unless metadata.empty?
         payload[:output_basename] = output_basename if output_basename
         payload[:output_files] = output_files unless output_files.empty?
@@ -41,7 +41,7 @@ module Miniphonic
 
       def payload_to_attributes(payload)
         @metadata = payload["metadata"]
-        @preset_name = payload["preset_name"]
+        @name = payload["preset_name"]
         @output_basename = payload["output_basename"]
         @output_files = payload["output_files"]
         @outgoing_services = payload["outgoing_services"]
