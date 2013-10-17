@@ -8,8 +8,8 @@ module Miniphonic
       "production"
     end
 
-    def upload(path)
-      command :upload, path_to_payload(path)
+    def upload_audio(path)
+      command :upload, path_to_payload(path, :input_file)
     end
 
     # If your file is on a service registered with Auphonic,

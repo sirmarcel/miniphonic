@@ -39,11 +39,11 @@ module Miniphonic::Helpers
     end
   end
 
-  def path_to_payload(path)
+  def path_to_payload(path, type)
     path = File.expand_path(path)
-    type = MIME::Types.type_for(path)
+    filetype = MIME::Types.type_for(path)
     payload = {}
-    payload[:input_file] = Faraday::UploadIO.new(path, type)
+    payload[type] = Faraday::UploadIO.new(path, filetype)
     payload
   end
 

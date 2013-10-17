@@ -57,10 +57,10 @@ module Miniphonic
       end
     end
 
-    describe '#upload' do
+    describe '#upload_audio' do
     
       before do
-        VCR.insert_cassette 'upload', :match_requests_on => [:uri]
+        VCR.insert_cassette 'upload_audio', :match_requests_on => [:uri]
         @production = Miniphonic::Production.new
         @production.create
       end
@@ -69,8 +69,8 @@ module Miniphonic
         VCR.eject_cassette
       end
 
-      it 'must upload a local file' do
-        reponse = @production.upload("test/spec/data/test.m4a")
+      it 'must upload a local audio file' do
+        reponse = @production.upload_audio("test/spec/data/test.m4a")
         reponse.success?.must_equal(true)
       end
 
