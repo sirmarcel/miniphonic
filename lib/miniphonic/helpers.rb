@@ -24,7 +24,7 @@ module Miniphonic::Helpers
       block.call(response) if block
       response
     else
-      raise server_error(response)
+      server_error(response)
     end
   end
 
@@ -35,7 +35,7 @@ module Miniphonic::Helpers
       block.call(response) if block
       response
     else
-      raise server_error(response)
+      server_error(response)
     end
   end
 
@@ -48,6 +48,6 @@ module Miniphonic::Helpers
   end
 
   def server_error(response)
-    return ServerSideError, "Error on server, responded #{ response.status } with message #{ response.body["error_message"]}."
+    raise Miniphonic::ServerSideError, "Error on server, responded #{ response.status } with message #{ response.body["error_message"]}."
   end
 end

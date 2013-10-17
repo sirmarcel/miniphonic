@@ -10,7 +10,7 @@ require "miniphonic/production"
 module Miniphonic
   class UuidError < StandardError
   end
-  class ServersideError < StandardError
+  class ServerSideError < StandardError
   end
 
   class << self

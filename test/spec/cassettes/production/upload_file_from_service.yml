@@ -21,7 +21,7 @@ http_interactions:
       server:
       - nginx/1.2.0
       date:
-      - Wed, 16 Oct 2013 14:19:58 GMT
+      - Thu, 17 Oct 2013 10:35:11 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -33,9 +33,9 @@ http_interactions:
       vary:
       - Authorization
       expires:
-      - Wed, 16 Oct 2013 14:19:58 GMT
+      - Thu, 17 Oct 2013 10:35:11 GMT
       last-modified:
-      - Wed, 16 Oct 2013 14:19:58 GMT
+      - Thu, 17 Oct 2013 10:35:11 GMT
       access-control-allow-origin:
       - '*'
       access-control-allow-credentials:
@@ -53,14 +53,14 @@ http_interactions:
             "data": {
                 "status_string": "Incomplete Form",
                 "image": null,
-                "creation_time": "2013-10-16T14:19:58.068Z",
+                "creation_time": "2013-10-17T10:35:11.658Z",
                 "chapters": [],
-                "edit_page": "https://auphonic.com/engine/upload/edit/DPgyEn4WuvZpGbRMjYcZrJ",
+                "edit_page": "https://auphonic.com/engine/upload/edit/sagJ7vLYu4kGikC8sqGVx3",
                 "channels": null,
                 "warning_message": "",
                 "samplerate": null,
                 "output_files": [],
-                "uuid": "DPgyEn4WuvZpGbRMjYcZrJ",
+                "uuid": "sagJ7vLYu4kGikC8sqGVx3",
                 "service": null,
                 "warning_status": null,
                 "has_video": false,
@@ -90,13 +90,13 @@ http_interactions:
                 },
                 "status": 9,
                 "input_file": "",
-                "status_page": "https://auphonic.com/engine/status/DPgyEn4WuvZpGbRMjYcZrJ",
+                "status_page": "https://auphonic.com/engine/status/sagJ7vLYu4kGikC8sqGVx3",
                 "length_timestring": "",
                 "multi_input_files": [],
                 "bitrate": null,
                 "output_basename": "",
                 "outgoing_services": [],
-                "change_time": "2013-10-16T14:19:58.068Z",
+                "change_time": "2013-10-17T10:35:11.658Z",
                 "error_message": "",
                 "waveform_image": null,
                 "length": 0,
@@ -114,10 +114,10 @@ http_interactions:
             }
         }
     http_version: 
-  recorded_at: Wed, 16 Oct 2013 14:20:03 GMT
+  recorded_at: Thu, 17 Oct 2013 10:35:18 GMT
 - request:
     method: post
-    uri: https://auphonic.com/api/production/DPgyEn4WuvZpGbRMjYcZrJ.json
+    uri: https://auphonic.com/api/production/sagJ7vLYu4kGikC8sqGVx3.json
     body:
       encoding: UTF-8
       string: '{"input_file":"test.m4a","service":"h8DesucEK6mepmyxtW83MY","reset_data":true}'
@@ -136,7 +136,7 @@ http_interactions:
       server:
       - nginx/1.2.0
       date:
-      - Wed, 16 Oct 2013 14:20:01 GMT
+      - Thu, 17 Oct 2013 10:35:14 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -148,9 +148,9 @@ http_interactions:
       vary:
       - Authorization
       expires:
-      - Wed, 16 Oct 2013 14:20:01 GMT
+      - Thu, 17 Oct 2013 10:35:14 GMT
       last-modified:
-      - Wed, 16 Oct 2013 14:20:01 GMT
+      - Thu, 17 Oct 2013 10:35:14 GMT
       access-control-allow-origin:
       - '*'
       access-control-allow-credentials:
@@ -168,14 +168,14 @@ http_interactions:
             "data": {
                 "status_string": "Incomplete Form",
                 "image": null,
-                "creation_time": "2013-10-16T14:19:58.068Z",
+                "creation_time": "2013-10-17T10:35:11.658Z",
                 "chapters": [],
-                "edit_page": "https://auphonic.com/engine/upload/edit/DPgyEn4WuvZpGbRMjYcZrJ",
+                "edit_page": "https://auphonic.com/engine/upload/edit/sagJ7vLYu4kGikC8sqGVx3",
                 "channels": null,
                 "warning_message": "",
                 "samplerate": null,
                 "output_files": [],
-                "uuid": "DPgyEn4WuvZpGbRMjYcZrJ",
+                "uuid": "sagJ7vLYu4kGikC8sqGVx3",
                 "service": "h8DesucEK6mepmyxtW83MY",
                 "warning_status": null,
                 "has_video": false,
@@ -205,13 +205,13 @@ http_interactions:
                 },
                 "status": 9,
                 "input_file": "test.m4a",
-                "status_page": "https://auphonic.com/engine/status/DPgyEn4WuvZpGbRMjYcZrJ",
+                "status_page": "https://auphonic.com/engine/status/sagJ7vLYu4kGikC8sqGVx3",
                 "length_timestring": "",
                 "multi_input_files": [],
                 "bitrate": null,
                 "output_basename": "",
                 "outgoing_services": [],
-                "change_time": "2013-10-16T14:19:58.068Z",
+                "change_time": "2013-10-17T10:35:11.658Z",
                 "error_message": "",
                 "waveform_image": null,
                 "length": 0,
@@ -229,5 +229,5 @@ http_interactions:
             }
         }
     http_version: 
-  recorded_at: Wed, 16 Oct 2013 14:20:06 GMT
+  recorded_at: Thu, 17 Oct 2013 10:35:20 GMT
 recorded_with: VCR 2.6.0

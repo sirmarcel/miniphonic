@@ -77,11 +77,27 @@ module Miniphonic
     end
 
     describe '#start' do
+
+      before do
+        VCR.insert_cassette 'start', :match_requests_on => [:uri, :body]
+      end
+
+      after do
+        VCR.eject_cassette
+      end
     
       it 'must run the start command' do
         @production = Production.new
         @production.expects(:command).with(:start)
         @production.start
+      end
+
+      it 'must raise an error if not enough data is provided' do
+        @production = Production.new
+        @production.create
+        lambda do
+          @production.start
+        end.must_raise(ServerSideError)
       end
       
     end
