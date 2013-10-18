@@ -1,0 +1,631 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://auphonic.com/api/presets.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      Authorization:
+      - Basic c2lybWFyY2VsOm5hYy1kaWQtY2lkLXlvZC1qYS1zaGxlai15dWwteQ==
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - nginx/1.2.0
+      date:
+      - Fri, 18 Oct 2013 22:20:48 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      cache-control:
+      - max-age=0
+      vary:
+      - Authorization
+      expires:
+      - Fri, 18 Oct 2013 22:20:48 GMT
+      last-modified:
+      - Fri, 18 Oct 2013 22:20:48 GMT
+      access-control-allow-origin:
+      - '*'
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Authorization,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+            "status_code": 200,
+            "form_errors": {},
+            "error_code": null,
+            "error_message": "",
+            "data": [
+                {
+                    "outgoing_services": [],
+                    "uuid": "eUAuHsjw6RjXKeNTTwJUSJ",
+                    "output_files": [],
+                    "preset_name": "Test Upload Cover Preset",
+                    "creation_time": "2013-10-18T22:20:45.735Z",
+                    "metadata": {
+                        "album": "",
+                        "publisher": "",
+                        "subtitle": "",
+                        "license": "",
+                        "artist": "",
+                        "track": "",
+                        "title": "",
+                        "summary": "",
+                        "append_chapters": false,
+                        "url": "",
+                        "license_url": "",
+                        "location": {
+                            "latitude": null,
+                            "longitude": null
+                        },
+                        "year": "",
+                        "genre": "",
+                        "tags": [
+                            ""
+                        ]
+                    },
+                    "algorithms": {
+                        "normloudness": true,
+                        "loudnesstarget": -16,
+                        "denoise": false,
+                        "denoiseamount": 0,
+                        "hipfilter": true,
+                        "leveler": true
+                    },
+                    "image": "https://auphonic.com/api/download/preset/eUAuHsjw6RjXKeNTTwJUSJ/test.jpg",
+                    "multi_input_files": [],
+                    "thumbnail": "https://auphonic.com/api/download/preset/eUAuHsjw6RjXKeNTTwJUSJ/thumbnail.jpg",
+                    "output_basename": ""
+                },
+                {
+                    "outgoing_services": [],
+                    "uuid": "NFAjzpd4Vk6GvBFty6JtoU",
+                    "output_files": [],
+                    "preset_name": "Test Preset",
+                    "creation_time": "2013-10-18T22:20:45.019Z",
+                    "metadata": {
+                        "album": "",
+                        "publisher": "",
+                        "subtitle": "",
+                        "license": "",
+                        "artist": "",
+                        "track": "",
+                        "title": "",
+                        "summary": "",
+                        "append_chapters": false,
+                        "url": "",
+                        "license_url": "",
+                        "location": {
+                            "latitude": null,
+                            "longitude": null
+                        },
+                        "year": "",
+                        "genre": "",
+                        "tags": [
+                            ""
+                        ]
+                    },
+                    "algorithms": {
+                        "normloudness": true,
+                        "loudnesstarget": -16,
+                        "denoise": false,
+                        "denoiseamount": 0,
+                        "hipfilter": true,
+                        "leveler": true
+                    },
+                    "image": null,
+                    "multi_input_files": [],
+                    "thumbnail": null,
+                    "output_basename": ""
+                },
+                {
+                    "outgoing_services": [],
+                    "uuid": "nSyXePi4C4Gph4Ki2rzhjY",
+                    "output_files": [],
+                    "preset_name": "Test Upload Cover Preset",
+                    "creation_time": "2013-10-18T22:18:57.607Z",
+                    "metadata": {
+                        "album": "",
+                        "publisher": "",
+                        "subtitle": "",
+                        "license": "",
+                        "artist": "",
+                        "track": "",
+                        "title": "",
+                        "summary": "",
+                        "append_chapters": false,
+                        "url": "",
+                        "license_url": "",
+                        "location": {
+                            "latitude": null,
+                            "longitude": null
+                        },
+                        "year": "",
+                        "genre": "",
+                        "tags": [
+                            ""
+                        ]
+                    },
+                    "algorithms": {
+                        "normloudness": true,
+                        "loudnesstarget": -16,
+                        "denoise": false,
+                        "denoiseamount": 0,
+                        "hipfilter": true,
+                        "leveler": true
+                    },
+                    "image": "https://auphonic.com/api/download/preset/nSyXePi4C4Gph4Ki2rzhjY/test.jpg",
+                    "multi_input_files": [],
+                    "thumbnail": "https://auphonic.com/api/download/preset/nSyXePi4C4Gph4Ki2rzhjY/thumbnail.jpg",
+                    "output_basename": ""
+                },
+                {
+                    "outgoing_services": [],
+                    "uuid": "c2fM6TvdDrZ8rUoeisQmwT",
+                    "output_files": [],
+                    "preset_name": "Test Preset",
+                    "creation_time": "2013-10-18T22:18:56.674Z",
+                    "metadata": {
+                        "album": "",
+                        "publisher": "",
+                        "subtitle": "",
+                        "license": "",
+                        "artist": "",
+                        "track": "",
+                        "title": "",
+                        "summary": "",
+                        "append_chapters": false,
+                        "url": "",
+                        "license_url": "",
+                        "location": {
+                            "latitude": null,
+                            "longitude": null
+                        },
+                        "year": "",
+                        "genre": "",
+                        "tags": [
+                            ""
+                        ]
+                    },
+                    "algorithms": {
+                        "normloudness": true,
+                        "loudnesstarget": -16,
+                        "denoise": false,
+                        "denoiseamount": 0,
+                        "hipfilter": true,
+                        "leveler": true
+                    },
+                    "image": null,
+                    "multi_input_files": [],
+                    "thumbnail": null,
+                    "output_basename": ""
+                },
+                {
+                    "outgoing_services": [],
+                    "uuid": "rTVFxTqmCoJ6BoB2ch6hNd",
+                    "output_files": [],
+                    "preset_name": "Test Upload Cover Preset",
+                    "creation_time": "2013-10-18T22:10:51.933Z",
+                    "metadata": {
+                        "album": "",
+                        "publisher": "",
+                        "subtitle": "",
+                        "license": "",
+                        "artist": "",
+                        "track": "",
+                        "title": "",
+                        "summary": "",
+                        "append_chapters": false,
+                        "url": "",
+                        "license_url": "",
+                        "location": {
+                            "latitude": null,
+                            "longitude": null
+                        },
+                        "year": "",
+                        "genre": "",
+                        "tags": [
+                            ""
+                        ]
+                    },
+                    "algorithms": {
+                        "normloudness": true,
+                        "loudnesstarget": -16,
+                        "denoise": false,
+                        "denoiseamount": 0,
+                        "hipfilter": true,
+                        "leveler": true
+                    },
+                    "image": "https://auphonic.com/api/download/preset/rTVFxTqmCoJ6BoB2ch6hNd/test.jpg",
+                    "multi_input_files": [],
+                    "thumbnail": "https://auphonic.com/api/download/preset/rTVFxTqmCoJ6BoB2ch6hNd/thumbnail.jpg",
+                    "output_basename": ""
+                },
+                {
+                    "outgoing_services": [],
+                    "uuid": "R8N98rGNSEjBY6BaUiqXaf",
+                    "output_files": [],
+                    "preset_name": "Test Preset",
+                    "creation_time": "2013-10-18T22:10:51.124Z",
+                    "metadata": {
+                        "album": "",
+                        "publisher": "",
+                        "subtitle": "",
+                        "license": "",
+                        "artist": "",
+                        "track": "",
+                        "title": "",
+                        "summary": "",
+                        "append_chapters": false,
+                        "url": "",
+                        "license_url": "",
+                        "location": {
+                            "latitude": null,
+                            "longitude": null
+                        },
+                        "year": "",
+                        "genre": "",
+                        "tags": [
+                            ""
+                        ]
+                    },
+                    "algorithms": {
+                        "normloudness": true,
+                        "loudnesstarget": -16,
+                        "denoise": false,
+                        "denoiseamount": 0,
+                        "hipfilter": true,
+                        "leveler": true
+                    },
+                    "image": null,
+                    "multi_input_files": [],
+                    "thumbnail": null,
+                    "output_basename": ""
+                },
+                {
+                    "outgoing_services": [],
+                    "uuid": "Wbp95cM7ueKjojLXrXtuNZ",
+                    "output_files": [],
+                    "preset_name": "Test Upload Cover Preset",
+                    "creation_time": "2013-10-18T22:08:00.742Z",
+                    "metadata": {
+                        "album": "",
+                        "publisher": "",
+                        "subtitle": "",
+                        "license": "",
+                        "artist": "",
+                        "track": "",
+                        "title": "",
+                        "summary": "",
+                        "append_chapters": false,
+                        "url": "",
+                        "license_url": "",
+                        "location": {
+                            "latitude": null,
+                            "longitude": null
+                        },
+                        "year": "",
+                        "genre": "",
+                        "tags": [
+                            ""
+                        ]
+                    },
+                    "algorithms": {
+                        "normloudness": true,
+                        "loudnesstarget": -16,
+                        "denoise": false,
+                        "denoiseamount": 0,
+                        "hipfilter": true,
+                        "leveler": true
+                    },
+                    "image": "https://auphonic.com/api/download/preset/Wbp95cM7ueKjojLXrXtuNZ/test.jpg",
+                    "multi_input_files": [],
+                    "thumbnail": "https://auphonic.com/api/download/preset/Wbp95cM7ueKjojLXrXtuNZ/thumbnail.jpg",
+                    "output_basename": ""
+                },
+                {
+                    "outgoing_services": [],
+                    "uuid": "wNpg8zJaQZGWuT7bkuxR4i",
+                    "output_files": [],
+                    "preset_name": "Test Preset",
+                    "creation_time": "2013-10-18T22:08:00.029Z",
+                    "metadata": {
+                        "album": "",
+                        "publisher": "",
+                        "subtitle": "",
+                        "license": "",
+                        "artist": "",
+                        "track": "",
+                        "title": "",
+                        "summary": "",
+                        "append_chapters": false,
+                        "url": "",
+                        "license_url": "",
+                        "location": {
+                            "latitude": null,
+                            "longitude": null
+                        },
+                        "year": "",
+                        "genre": "",
+                        "tags": [
+                            ""
+                        ]
+                    },
+                    "algorithms": {
+                        "normloudness": true,
+                        "loudnesstarget": -16,
+                        "denoise": false,
+                        "denoiseamount": 0,
+                        "hipfilter": true,
+                        "leveler": true
+                    },
+                    "image": null,
+                    "multi_input_files": [],
+                    "thumbnail": null,
+                    "output_basename": ""
+                },
+                {
+                    "outgoing_services": [],
+                    "uuid": "k9EGhShJFtxyjw7vDDDgH6",
+                    "output_files": [],
+                    "preset_name": "Test Upload Cover Preset",
+                    "creation_time": "2013-10-18T22:04:51.259Z",
+                    "metadata": {
+                        "album": "",
+                        "publisher": "",
+                        "subtitle": "",
+                        "license": "",
+                        "artist": "",
+                        "track": "",
+                        "title": "",
+                        "summary": "",
+                        "append_chapters": false,
+                        "url": "",
+                        "license_url": "",
+                        "location": {
+                            "latitude": null,
+                            "longitude": null
+                        },
+                        "year": "",
+                        "genre": "",
+                        "tags": [
+                            ""
+                        ]
+                    },
+                    "algorithms": {
+                        "normloudness": true,
+                        "loudnesstarget": -16,
+                        "denoise": false,
+                        "denoiseamount": 0,
+                        "hipfilter": true,
+                        "leveler": true
+                    },
+                    "image": "https://auphonic.com/api/download/preset/k9EGhShJFtxyjw7vDDDgH6/test.jpg",
+                    "multi_input_files": [],
+                    "thumbnail": "https://auphonic.com/api/download/preset/k9EGhShJFtxyjw7vDDDgH6/thumbnail.jpg",
+                    "output_basename": ""
+                },
+                {
+                    "outgoing_services": [],
+                    "uuid": "g4ucHLM88qLmqRTRHnmivW",
+                    "output_files": [],
+                    "preset_name": "Test Preset",
+                    "creation_time": "2013-10-18T22:04:50.382Z",
+                    "metadata": {
+                        "album": "",
+                        "publisher": "",
+                        "subtitle": "",
+                        "license": "",
+                        "artist": "",
+                        "track": "",
+                        "title": "",
+                        "summary": "",
+                        "append_chapters": false,
+                        "url": "",
+                        "license_url": "",
+                        "location": {
+                            "latitude": null,
+                            "longitude": null
+                        },
+                        "year": "",
+                        "genre": "",
+                        "tags": [
+                            ""
+                        ]
+                    },
+                    "algorithms": {
+                        "normloudness": true,
+                        "loudnesstarget": -16,
+                        "denoise": false,
+                        "denoiseamount": 0,
+                        "hipfilter": true,
+                        "leveler": true
+                    },
+                    "image": null,
+                    "multi_input_files": [],
+                    "thumbnail": null,
+                    "output_basename": ""
+                },
+                {
+                    "outgoing_services": [],
+                    "uuid": "uji3RFqNiSuFepBcadZUXV",
+                    "output_files": [],
+                    "preset_name": "Test Upload Cover Preset",
+                    "creation_time": "2013-10-17T22:08:50.404Z",
+                    "metadata": {
+                        "album": "",
+                        "publisher": "",
+                        "subtitle": "",
+                        "license": "",
+                        "artist": "",
+                        "track": "",
+                        "title": "",
+                        "summary": "",
+                        "append_chapters": false,
+                        "url": "",
+                        "license_url": "",
+                        "location": {
+                            "latitude": null,
+                            "longitude": null
+                        },
+                        "year": "",
+                        "genre": "",
+                        "tags": [
+                            ""
+                        ]
+                    },
+                    "algorithms": {
+                        "normloudness": true,
+                        "loudnesstarget": -16,
+                        "denoise": false,
+                        "denoiseamount": 0,
+                        "hipfilter": true,
+                        "leveler": true
+                    },
+                    "image": "https://auphonic.com/api/download/preset/uji3RFqNiSuFepBcadZUXV/test.jpg",
+                    "multi_input_files": [],
+                    "thumbnail": "https://auphonic.com/api/download/preset/uji3RFqNiSuFepBcadZUXV/thumbnail.jpg",
+                    "output_basename": ""
+                },
+                {
+                    "outgoing_services": [],
+                    "uuid": "RQSWVCGqsKwic3Ga2HEKrD",
+                    "output_files": [],
+                    "preset_name": "Test Preset",
+                    "creation_time": "2013-10-17T22:08:49.519Z",
+                    "metadata": {
+                        "album": "",
+                        "publisher": "",
+                        "subtitle": "",
+                        "license": "",
+                        "artist": "",
+                        "track": "",
+                        "title": "",
+                        "summary": "",
+                        "append_chapters": false,
+                        "url": "",
+                        "license_url": "",
+                        "location": {
+                            "latitude": null,
+                            "longitude": null
+                        },
+                        "year": "",
+                        "genre": "",
+                        "tags": [
+                            ""
+                        ]
+                    },
+                    "algorithms": {
+                        "normloudness": true,
+                        "loudnesstarget": -16,
+                        "denoise": false,
+                        "denoiseamount": 0,
+                        "hipfilter": true,
+                        "leveler": true
+                    },
+                    "image": null,
+                    "multi_input_files": [],
+                    "thumbnail": null,
+                    "output_basename": ""
+                },
+                {
+                    "outgoing_services": [
+                        {
+                            "outgoing": true,
+                            "display_name": "Marcel Langer",
+                            "transfer_success": false,
+                            "error_message": "",
+                            "result_urls": [],
+                            "result_page": null,
+                            "incoming": true,
+                            "type": "dropbox",
+                            "email": "me@lumenpage.com",
+                            "uuid": "h8DesucEK6mepmyxtW83MY"
+                        }
+                    ],
+                    "uuid": "QbZ5ycWHJnkd2j9Bp6k98i",
+                    "output_files": [
+                        {
+                            "outgoing_services": [],
+                            "suffix": "",
+                            "format": "mp3",
+                            "checksum": "",
+                            "size_string": "",
+                            "download_url": null,
+                            "ending": "mp3",
+                            "split_on_chapters": false,
+                            "filename": "",
+                            "bitrate": 96,
+                            "mono_mixdown": false,
+                            "size": 0
+                        },
+                        {
+                            "outgoing_services": [],
+                            "suffix": "",
+                            "format": "aac",
+                            "checksum": "",
+                            "size_string": "",
+                            "download_url": null,
+                            "ending": "m4a",
+                            "split_on_chapters": false,
+                            "filename": "",
+                            "bitrate": 64,
+                            "mono_mixdown": false,
+                            "size": 0
+                        }
+                    ],
+                    "preset_name": "Retinacast",
+                    "creation_time": "2012-08-03T17:46:15.932Z",
+                    "metadata": {
+                        "album": "Retinacast",
+                        "publisher": "",
+                        "subtitle": "",
+                        "license": "",
+                        "artist": "Retncast Crew",
+                        "track": "",
+                        "title": "Sommerpause",
+                        "summary": "",
+                        "append_chapters": false,
+                        "url": "",
+                        "license_url": "",
+                        "location": {
+                            "latitude": null,
+                            "longitude": null
+                        },
+                        "year": "2012",
+                        "genre": "Podcast",
+                        "tags": [
+                            ""
+                        ]
+                    },
+                    "algorithms": {
+                        "normloudness": true,
+                        "loudnesstarget": -18,
+                        "denoise": false,
+                        "denoiseamount": 0,
+                        "hipfilter": true,
+                        "leveler": true
+                    },
+                    "image": "https://auphonic.com/api/download/preset/QbZ5ycWHJnkd2j9Bp6k98i/retinacast_logo_1400px.png",
+                    "multi_input_files": [],
+                    "thumbnail": "https://auphonic.com/api/download/preset/QbZ5ycWHJnkd2j9Bp6k98i/thumbnail.jpg",
+                    "output_basename": "Retinacast_"
+                }
+            ]
+        }
+    http_version: 
+  recorded_at: Fri, 18 Oct 2013 22:20:57 GMT
+recorded_with: VCR 2.6.0

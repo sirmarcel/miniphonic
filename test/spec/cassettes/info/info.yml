@@ -19,7 +19,7 @@ http_interactions:
       server:
       - nginx/1.2.0
       date:
-      - Fri, 18 Oct 2013 22:10:48 GMT
+      - Fri, 18 Oct 2013 22:20:42 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -27,9 +27,9 @@ http_interactions:
       connection:
       - close
       last-modified:
-      - Fri, 18 Oct 2013 22:04:33 GMT
+      - Fri, 18 Oct 2013 22:18:53 GMT
       expires:
-      - Fri, 18 Oct 2013 22:14:33 GMT
+      - Fri, 18 Oct 2013 22:28:53 GMT
       vary:
       - Authorization
       cache-control:
@@ -736,5 +736,5 @@ http_interactions:
             }
         }
     http_version: 
-  recorded_at: Fri, 18 Oct 2013 22:10:57 GMT
+  recorded_at: Fri, 18 Oct 2013 22:20:51 GMT
 recorded_with: VCR 2.6.0
