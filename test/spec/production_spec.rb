@@ -4,6 +4,24 @@ module Miniphonic
 
   describe Production do
 
+    describe '.all' do
+    
+      before do
+        VCR.insert_cassette 'all'
+      end
+    
+      after do
+        VCR.eject_cassette
+      end
+    
+      it 'must return an array of productions' do
+        Production.all.each do |item|
+          item.must_be_instance_of(Production)
+        end
+      end
+    
+    end
+
     describe '#endpoint' do
     
       it 'must define the right endpoint' do

@@ -14,6 +14,24 @@ module Miniphonic
 
     end
 
+    describe '.all' do
+    
+      before do
+        VCR.insert_cassette 'all'
+      end
+    
+      after do
+        VCR.eject_cassette
+      end
+    
+      it 'must return an array of presets' do
+        Preset.all.each do |item|
+          item.must_be_instance_of(Preset)
+        end
+      end
+    
+    end
+
     describe '#endpoint' do
     
       it 'must define the right endpoint' do
