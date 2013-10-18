@@ -24,11 +24,6 @@ module Miniphonic
           VCR.eject_cassette
         end
 
-        it 'won\'t fail' do
-          response = Miniphonic.services
-          response.success?.must_equal(true)
-        end
-
         it 'must return an Array of Hashes' do
           Miniphonic.services.must_be_kind_of(Array)
           Miniphonic.services.each do |item|
@@ -47,11 +42,6 @@ module Miniphonic
         after do
           VCR.eject_cassette
         end
-
-        it 'won\'t fail' do
-          response = Miniphonic.service_types
-          response.success?.must_equal(true)
-        end
       
         it 'must return a hash' do
           Miniphonic.service_types.must_be_kind_of(Hash)
@@ -67,11 +57,6 @@ module Miniphonic
       
         after do
           VCR.eject_cassette
-        end
-
-        it 'won\'t fail' do
-          response = Miniphonic.algorithms
-          response.success?.must_equal(true)
         end
       
         it 'must return a hash' do
@@ -89,11 +74,6 @@ module Miniphonic
         after do
           VCR.eject_cassette
         end
-
-        it 'won\'t fail' do
-          response = Miniphonic.output_files
-          response.success?.must_equal(true)
-        end
       
         it 'must return a hash' do
           Miniphonic.output_files.must_be_kind_of(Hash)
@@ -109,11 +89,6 @@ module Miniphonic
       
         after do
           VCR.eject_cassette
-        end
-
-        it 'won\'t fail' do
-          response = Miniphonic.status_codes
-          response.success?.must_equal(true)
         end
       
         it 'must return a hash' do
@@ -131,11 +106,6 @@ module Miniphonic
         after do
           VCR.eject_cassette
         end
-
-        it 'won\'t fail' do
-          response = Miniphonic.user_info
-          response.success?.must_equal(true)
-        end
       
         it 'must return a hash' do
           Miniphonic.user_info.must_be_kind_of(Hash)
@@ -152,11 +122,7 @@ module Miniphonic
         after do
           VCR.eject_cassette
         end
-      
-        it 'won\'t fail' do
-          response = Miniphonic.info
-          response.success?.must_equal(true)
-        end
+    
         
         it 'must return a hash' do
           Miniphonic.info.must_be_kind_of(Hash)
