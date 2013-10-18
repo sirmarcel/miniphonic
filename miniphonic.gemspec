@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["sirmarcel"]
   spec.email         = ["me@lumenlog.com"]
   spec.description   = %q{Miniphonic is a wrapper for the Auphonic.com API}
-  spec.summary       = %q{Exposes the Auphonic API in Ruby, for audio processing bliss.}
+  spec.summary       = %q{Wraps the Auphonic API in Ruby, for audio processing bliss.}
   spec.homepage      = "https://github.com/sirmarcel/miniphonic"
   spec.license       = "MIT"
 
@@ -22,7 +22,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake"
   spec.add_development_dependency "mocha"
   spec.add_development_dependency "vcr"
-  spec.add_development_dependency "webmock"
   spec.add_runtime_dependency "multi_json"
   spec.add_runtime_dependency "faraday"
   spec.add_runtime_dependency "faraday_middleware"
