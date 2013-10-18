@@ -19,21 +19,21 @@ http_interactions:
       server:
       - nginx/1.2.0
       date:
-      - Fri, 18 Oct 2013 22:20:41 GMT
+      - Fri, 18 Oct 2013 22:58:42 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
       - chunked
       connection:
       - close
-      last-modified:
-      - Fri, 18 Oct 2013 22:18:53 GMT
-      expires:
-      - Fri, 18 Oct 2013 22:28:53 GMT
-      vary:
-      - Authorization
       cache-control:
       - max-age=600
+      vary:
+      - Authorization
+      expires:
+      - Fri, 18 Oct 2013 23:08:42 GMT
+      last-modified:
+      - Fri, 18 Oct 2013 22:58:42 GMT
       access-control-allow-origin:
       - '*'
       access-control-allow-credentials:
@@ -166,5 +166,5 @@ http_interactions:
             }
         }
     http_version: 
-  recorded_at: Fri, 18 Oct 2013 22:20:50 GMT
+  recorded_at: Fri, 18 Oct 2013 22:58:51 GMT
 recorded_with: VCR 2.6.0

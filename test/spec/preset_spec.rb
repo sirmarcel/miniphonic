@@ -70,6 +70,26 @@ module Miniphonic
 
     end
 
+    describe '#delete' do
+    
+      before do
+        VCR.insert_cassette 'delete'
+        @preset = Preset.new
+        @preset.name = "To be deleted"
+        @preset.create
+      end
+    
+      after do
+        VCR.eject_cassette
+      end
+    
+      it 'must delete the preset' do
+        response = @preset.delete
+        response.success?.must_equal(true)
+      end
+    
+    end
+
     describe '#upload_cover' do
     
       before do

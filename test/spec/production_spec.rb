@@ -63,6 +63,25 @@ module Miniphonic
 
     end
 
+    describe '#delete' do
+    
+      before do
+        VCR.insert_cassette 'delete'
+        @production = Production.new
+        @production.create
+      end
+    
+      after do
+        VCR.eject_cassette
+      end
+    
+      it 'must delete the production' do
+        response = @production.delete
+        response.success?.must_equal(true)
+      end
+    
+    end
+
     describe '#upload_audio_from_service' do
     
       before do

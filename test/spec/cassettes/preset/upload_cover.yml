@@ -21,7 +21,7 @@ http_interactions:
       server:
       - nginx/1.2.0
       date:
-      - Fri, 18 Oct 2013 22:20:45 GMT
+      - Fri, 18 Oct 2013 22:58:47 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -33,9 +33,9 @@ http_interactions:
       vary:
       - Authorization
       expires:
-      - Fri, 18 Oct 2013 22:20:45 GMT
+      - Fri, 18 Oct 2013 22:58:47 GMT
       last-modified:
-      - Fri, 18 Oct 2013 22:20:45 GMT
+      - Fri, 18 Oct 2013 22:58:47 GMT
       access-control-allow-origin:
       - '*'
       access-control-allow-credentials:
@@ -52,10 +52,10 @@ http_interactions:
             "error_message": "",
             "data": {
                 "outgoing_services": [],
-                "uuid": "eUAuHsjw6RjXKeNTTwJUSJ",
+                "uuid": "Jt7Zw5XxHVCurrN5zrh4AG",
                 "output_files": [],
                 "preset_name": "Test Upload Cover Preset",
-                "creation_time": "2013-10-18T22:20:45.735Z",
+                "creation_time": "2013-10-18T22:58:47.706Z",
                 "metadata": {
                     "album": "",
                     "publisher": "",
@@ -93,17 +93,17 @@ http_interactions:
             }
         }
     http_version: 
-  recorded_at: Fri, 18 Oct 2013 22:20:54 GMT
+  recorded_at: Fri, 18 Oct 2013 22:58:56 GMT
 - request:
     method: post
-    uri: https://auphonic.com/api/preset/eUAuHsjw6RjXKeNTTwJUSJ/upload.json
+    uri: https://auphonic.com/api/preset/Jt7Zw5XxHVCurrN5zrh4AG/upload.json
     body:
       encoding: ASCII-8BIT
       string: !binary |-
         LS0tLS0tLS0tLS0tLVJ1YnlNdWx0aXBhcnRQb3N0DQpDb250ZW50LURpc3Bv
         c2l0aW9uOiBmb3JtLWRhdGE7IG5hbWU9ImltYWdlIjsgZmlsZW5hbWU9InRl
         c3QuanBnIg0KQ29udGVudC1MZW5ndGg6IDEyNTI3DQpDb250ZW50LVR5cGU6
-        IFsjPE1JTUU6OlR5cGU6MHgwMDdmZWY3YTg3YTkzMCBAY29udGVudF90eXBl
+        IFsjPE1JTUU6OlR5cGU6MHgwMDdmZjYxYWJiOTI1OCBAY29udGVudF90eXBl
         PSJpbWFnZS9qcGVnIiwgQHJhd19tZWRpYV90eXBlPSJpbWFnZSIsIEByYXdf
         c3ViX3R5cGU9ImpwZWciLCBAc2ltcGxpZmllZD0iaW1hZ2UvanBlZyIsIEBt
         ZWRpYV90eXBlPSJpbWFnZSIsIEBzdWJfdHlwZT0ianBlZyIsIEBleHRlbnNp
@@ -408,7 +408,7 @@ http_interactions:
       server:
       - nginx/1.2.0
       date:
-      - Fri, 18 Oct 2013 22:20:47 GMT
+      - Fri, 18 Oct 2013 22:58:48 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -420,9 +420,9 @@ http_interactions:
       vary:
       - Authorization
       expires:
-      - Fri, 18 Oct 2013 22:20:47 GMT
+      - Fri, 18 Oct 2013 22:58:48 GMT
       last-modified:
-      - Fri, 18 Oct 2013 22:20:47 GMT
+      - Fri, 18 Oct 2013 22:58:48 GMT
       access-control-allow-origin:
       - '*'
       access-control-allow-credentials:
@@ -439,10 +439,10 @@ http_interactions:
             "error_message": "",
             "data": {
                 "outgoing_services": [],
-                "uuid": "eUAuHsjw6RjXKeNTTwJUSJ",
+                "uuid": "Jt7Zw5XxHVCurrN5zrh4AG",
                 "output_files": [],
                 "preset_name": "Test Upload Cover Preset",
-                "creation_time": "2013-10-18T22:20:45.735Z",
+                "creation_time": "2013-10-18T22:58:47.706Z",
                 "metadata": {
                     "album": "",
                     "publisher": "",
@@ -473,12 +473,12 @@ http_interactions:
                     "hipfilter": true,
                     "leveler": true
                 },
-                "image": "https://auphonic.com/api/download/preset/eUAuHsjw6RjXKeNTTwJUSJ/test.jpg",
+                "image": "https://auphonic.com/api/download/preset/Jt7Zw5XxHVCurrN5zrh4AG/test.jpg",
                 "multi_input_files": [],
-                "thumbnail": "https://auphonic.com/api/download/preset/eUAuHsjw6RjXKeNTTwJUSJ/thumbnail.jpg",
+                "thumbnail": "https://auphonic.com/api/download/preset/Jt7Zw5XxHVCurrN5zrh4AG/thumbnail.jpg",
                 "output_basename": ""
             }
         }
     http_version: 
-  recorded_at: Fri, 18 Oct 2013 22:20:56 GMT
+  recorded_at: Fri, 18 Oct 2013 22:58:57 GMT
 recorded_with: VCR 2.6.0

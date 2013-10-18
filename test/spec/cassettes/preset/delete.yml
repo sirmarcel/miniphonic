@@ -5,7 +5,7 @@ http_interactions:
     uri: https://auphonic.com/api/presets.json
     body:
       encoding: UTF-8
-      string: '{"preset_name":"Test Preset"}'
+      string: '{"preset_name":"To be deleted"}'
     headers:
       User-Agent:
       - Faraday v0.8.8
@@ -21,7 +21,7 @@ http_interactions:
       server:
       - nginx/1.2.0
       date:
-      - Fri, 18 Oct 2013 22:58:45 GMT
+      - Fri, 18 Oct 2013 22:58:46 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -33,9 +33,9 @@ http_interactions:
       vary:
       - Authorization
       expires:
-      - Fri, 18 Oct 2013 22:58:45 GMT
+      - Fri, 18 Oct 2013 22:58:46 GMT
       last-modified:
-      - Fri, 18 Oct 2013 22:58:45 GMT
+      - Fri, 18 Oct 2013 22:58:46 GMT
       access-control-allow-origin:
       - '*'
       access-control-allow-credentials:
@@ -52,10 +52,10 @@ http_interactions:
             "error_message": "",
             "data": {
                 "outgoing_services": [],
-                "uuid": "gAqurE7JpDkB858ZBysnER",
+                "uuid": "zCojJJ8KQqM354hLFPU32o",
                 "output_files": [],
-                "preset_name": "Test Preset",
-                "creation_time": "2013-10-18T22:58:45.596Z",
+                "preset_name": "To be deleted",
+                "creation_time": "2013-10-18T22:58:46.421Z",
                 "metadata": {
                     "album": "",
                     "publisher": "",
@@ -93,5 +93,50 @@ http_interactions:
             }
         }
     http_version: 
-  recorded_at: Fri, 18 Oct 2013 22:58:54 GMT
+  recorded_at: Fri, 18 Oct 2013 22:58:55 GMT
+- request:
+    method: delete
+    uri: https://auphonic.com/api/preset/zCojJJ8KQqM354hLFPU32o.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      Authorization:
+      - Basic c2lybWFyY2VsOm5hYy1kaWQtY2lkLXlvZC1qYS1zaGxlai15dWwteQ==
+  response:
+    status:
+      code: 204
+      message: 
+    headers:
+      server:
+      - nginx/1.2.0
+      date:
+      - Fri, 18 Oct 2013 22:58:47 GMT
+      content-type:
+      - application/json; charset=utf-8
+      content-length:
+      - '0'
+      connection:
+      - close
+      expires:
+      - Fri, 18 Oct 2013 22:58:47 GMT
+      vary:
+      - Authorization
+      last-modified:
+      - Fri, 18 Oct 2013 22:58:47 GMT
+      cache-control:
+      - max-age=0
+      access-control-allow-origin:
+      - '*'
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Authorization,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type
+    body:
+      encoding: US-ASCII
+      string: ''
+    http_version: 
+  recorded_at: Fri, 18 Oct 2013 22:58:55 GMT
 recorded_with: VCR 2.6.0
