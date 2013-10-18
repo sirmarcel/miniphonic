@@ -1,6 +1,19 @@
 module Miniphonic
   class ApiObject
     include Miniphonic::Helpers
+    extend Miniphonic::Helpers
+
+    class << self
+      
+      def all
+        from_server self.new.collection_url do |response|    
+          return response.data.each_with_object([]) do |hash, objects|
+            objects << self.new(hash["uuid"])
+          end
+        end
+      end
+
+    end
 
     attr_accessor :uuid
     attr_accessor :data
