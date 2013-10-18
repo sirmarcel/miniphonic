@@ -62,7 +62,7 @@ Run ```production.delete``` or ```preset.delete``` to delete on the server.
 #### Setting/Getting Attributes
 
 Usually, you actually want to do something useful, so you need to add some attributes to your API objects. 
-Miniphonic exposes the "top level" of attributes in dot notation, the rest is handled by the appropriate data structures (hashes and arrays). Take a look at [this page]( https://auphonic.com/api-docs/details.html#one-request ) or ```{prest|production}_attributes.rb``` to see what you can do. 
+Miniphonic exposes the "top level" of attributes in dot notation, the rest is handled by the appropriate data structures (hashes and arrays). Take a look at [this page]( https://auphonic.com/api-docs/details.html#one-request ) or ```{preset|production}_attributes.rb``` to see what you can do. 
 
 Quick example:
 ```
@@ -76,9 +76,20 @@ You can get attributes from the server (thus overwriting the one in your local A
 
 If you run ```Miniphonic::Production.all``` or ```Miniphonic::Preset.all```, you get an array of all API objects on ther server, already initialized with their uuids. If you need their attributes as well, you need to run ```get_attributes``` on each of them.
 
+#### Pretty pictures
+
+To upload a cover image to a production or preset, use
+```
+production.upload_cover("/path/to/image.jpg")
+preset.upload_cover("yet/another/image.png")
+```
+and smile.
+
 ### Productions
 
-You can upload an input file (to production with a uuid) by running
+#### Getting audio in
+
+You can upload an input file (to a production with a uuid) by running
 
 ```
 production.upload_audio("path/to/file")
@@ -89,10 +100,14 @@ Or use one from an external service:
 production.upload_audio_from_service("file.m4a","service_uuid")
 ```
 
+#### Getting audio out
+
 Add outfiles:
 ```
 production.output_files << {format: "mp3", basename: "my_file"}
 ```
+
+#### Processing
 
 Start and stop productions (if you have provided an input file and at least one output file):
 
