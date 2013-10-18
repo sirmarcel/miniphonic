@@ -7,8 +7,11 @@ require "miniphonic/response"
 require "miniphonic/api_object"
 require "miniphonic/production"
 require "miniphonic/preset"
+require "miniphonic/info"
 
 module Miniphonic
+  extend Miniphonic::Info
+
   class UuidError < StandardError
   end
   class ServerSideError < StandardError
