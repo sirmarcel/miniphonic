@@ -1,0 +1,343 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://auphonic.com/api/info/output_files.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      Authorization:
+      - Basic c2lybWFyY2VsOm5hYy1kaWQtY2lkLXlvZC1qYS1zaGxlai15dWwteQ==
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - nginx/1.2.0
+      date:
+      - Fri, 18 Oct 2013 22:10:48 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      last-modified:
+      - Fri, 18 Oct 2013 22:04:34 GMT
+      expires:
+      - Fri, 18 Oct 2013 22:14:34 GMT
+      vary:
+      - Authorization
+      cache-control:
+      - max-age=600
+      access-control-allow-origin:
+      - '*'
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Authorization,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+            "status_code": 200,
+            "form_errors": {},
+            "error_code": null,
+            "error_message": "",
+            "data": {
+                "alac": {
+                    "display_name": "ALAC (M4A, MP4)",
+                    "bitrate_strings": [
+                        "optimal (stereo ~140MB/h, mono ~70MB/h)"
+                    ],
+                    "type": "lossless",
+                    "endings": [
+                        "m4a",
+                        "mp4"
+                    ]
+                },
+                "aac": {
+                    "display_name": "AAC (M4A, MP4, M4B)",
+                    "bitrates": [
+                        "24",
+                        "32",
+                        "40",
+                        "48",
+                        "56",
+                        "64",
+                        "80",
+                        "96",
+                        "112",
+                        "128",
+                        "160",
+                        "192",
+                        "256"
+                    ],
+                    "endings": [
+                        "m4a",
+                        "mp4",
+                        "m4b"
+                    ],
+                    "type": "lossy",
+                    "default_bitrate": "80",
+                    "bitrate_strings": [
+                        "24 kbps, HE AAC (~11MB/h)",
+                        "32 kbps, HE AAC (~14MB/h)",
+                        "40 kbps, HE AAC (~18MB/h)",
+                        "48 kbps, HE AAC (~21MB/h)",
+                        "56 kbps, HE AAC (~25MB/h)",
+                        "64 kbps, HE AAC (~28MB/h)",
+                        "80 kbps, HE AAC (~35MB/h)",
+                        "96 kbps, HE AAC (~42MB/h)",
+                        "112 kbps, HE AAC (~49MB/h)",
+                        "128 kbps (~56MB/h)",
+                        "160 kbps (~70MB/h)",
+                        "192 kbps (~84MB/h)",
+                        "256 kbps (~113MB/h)"
+                    ]
+                },
+                "descr": {
+                    "display_name": "Production Description",
+                    "type": "description",
+                    "endings": [
+                        "json",
+                        "xml",
+                        "yaml"
+                    ]
+                },
+                "waveform": {
+                    "display_name": "Waveform Image",
+                    "type": "description",
+                    "endings": [
+                        "waveform.png"
+                    ]
+                },
+                "psc": {
+                    "display_name": "Podlove Simple Chapters",
+                    "type": "description",
+                    "endings": [
+                        "psc",
+                        "xml"
+                    ]
+                },
+                "image": {
+                    "display_name": "Cover Image",
+                    "type": "description"
+                },
+                "mp3-vbr": {
+                    "display_name": "MP3 Variable Bitrate",
+                    "bitrates": [
+                        "32",
+                        "40",
+                        "48",
+                        "56",
+                        "64",
+                        "80",
+                        "96",
+                        "112",
+                        "128",
+                        "160",
+                        "192",
+                        "224",
+                        "256",
+                        "320"
+                    ],
+                    "endings": [
+                        "mp3"
+                    ],
+                    "type": "lossy",
+                    "default_bitrate": "96",
+                    "bitrate_strings": [
+                        "~32 kbps (~14MB/h)",
+                        "~40 kbps (~18MB/h)",
+                        "~48 kbps (~21MB/h)",
+                        "~56 kbps (~25MB/h)",
+                        "~64 kbps (~28MB/h)",
+                        "~80 kbps (~35MB/h)",
+                        "~96 kbps (~42MB/h)",
+                        "~112 kbps (~49MB/h)",
+                        "~128 kbps (~56MB/h)",
+                        "~160 kbps (~70MB/h)",
+                        "~192 kbps (~84MB/h)",
+                        "~224 kbps (~98MB/h)",
+                        "~256 kbps (~113MB/h)",
+                        "~320 kbps (~141MB/h)"
+                    ]
+                },
+                "vorbis": {
+                    "display_name": "Ogg Vorbis",
+                    "bitrates": [
+                        "32",
+                        "40",
+                        "48",
+                        "56",
+                        "64",
+                        "80",
+                        "96",
+                        "112",
+                        "128",
+                        "160",
+                        "192",
+                        "224",
+                        "256",
+                        "320"
+                    ],
+                    "endings": [
+                        "ogg",
+                        "oga"
+                    ],
+                    "type": "lossy",
+                    "default_bitrate": "96",
+                    "bitrate_strings": [
+                        "~32 kbps (~14MB/h)",
+                        "~40 kbps (~18MB/h)",
+                        "~48 kbps (~21MB/h)",
+                        "~56 kbps (~25MB/h)",
+                        "~64 kbps (~28MB/h)",
+                        "~80 kbps (~35MB/h)",
+                        "~96 kbps (~42MB/h)",
+                        "~112 kbps (~49MB/h)",
+                        "~128 kbps (~56MB/h)",
+                        "~160 kbps (~70MB/h)",
+                        "~192 kbps (~84MB/h)",
+                        "~224 kbps (~98MB/h)",
+                        "~256 kbps (~113MB/h)",
+                        "~320 kbps (~141MB/h)"
+                    ]
+                },
+                "opus": {
+                    "display_name": "Opus",
+                    "bitrates": [
+                        "6",
+                        "12",
+                        "16",
+                        "20",
+                        "24",
+                        "32",
+                        "40",
+                        "48",
+                        "56",
+                        "64",
+                        "80",
+                        "96",
+                        "112",
+                        "128",
+                        "160",
+                        "192",
+                        "256"
+                    ],
+                    "endings": [
+                        "opus"
+                    ],
+                    "type": "lossy",
+                    "default_bitrate": "64",
+                    "bitrate_strings": [
+                        "~6 kbps (~3MB/h)",
+                        "~12 kbps (~5MB/h)",
+                        "~16 kbps (~7MB/h)",
+                        "~20 kbps (~9MB/h)",
+                        "~24 kbps (~11MB/h)",
+                        "~32 kbps (~14MB/h)",
+                        "~40 kbps (~18MB/h)",
+                        "~48 kbps (~21MB/h)",
+                        "~56 kbps (~25MB/h)",
+                        "~64 kbps (~28MB/h)",
+                        "~80 kbps (~35MB/h)",
+                        "~96 kbps (~42MB/h)",
+                        "~112 kbps (~49MB/h)",
+                        "~128 kbps (~56MB/h)",
+                        "~160 kbps (~70MB/h)",
+                        "~192 kbps (~84MB/h)",
+                        "~256 kbps (~113MB/h)"
+                    ]
+                },
+                "video": {
+                    "display_name": "Video (same format as input)",
+                    "type": "video",
+                    "bitrate_strings": [
+                        "same bitrate as input"
+                    ]
+                },
+                "mp3": {
+                    "display_name": "MP3",
+                    "bitrates": [
+                        "32",
+                        "40",
+                        "48",
+                        "56",
+                        "64",
+                        "80",
+                        "96",
+                        "112",
+                        "128",
+                        "160",
+                        "192",
+                        "224",
+                        "256",
+                        "320"
+                    ],
+                    "endings": [
+                        "mp3"
+                    ],
+                    "type": "lossy",
+                    "default_bitrate": "112",
+                    "bitrate_strings": [
+                        "32 kbps (~14MB/h)",
+                        "40 kbps (~18MB/h)",
+                        "48 kbps (~21MB/h)",
+                        "56 kbps (~25MB/h)",
+                        "64 kbps (~28MB/h)",
+                        "80 kbps (~35MB/h)",
+                        "96 kbps (~42MB/h)",
+                        "112 kbps (~49MB/h)",
+                        "128 kbps (~56MB/h)",
+                        "160 kbps (~70MB/h)",
+                        "192 kbps (~84MB/h)",
+                        "224 kbps (~98MB/h)",
+                        "256 kbps (~113MB/h)",
+                        "320 kbps (~141MB/h)"
+                    ]
+                },
+                "flac": {
+                    "display_name": "FLAC",
+                    "bitrate_strings": [
+                        "optimal (stereo ~130MB/h, mono ~65MB/h)"
+                    ],
+                    "type": "lossless",
+                    "endings": [
+                        "flac"
+                    ]
+                },
+                "input": {
+                    "display_name": "Unprocessed Input File",
+                    "type": "description",
+                    "bitrate_strings": [
+                        "same bitrate as input"
+                    ]
+                },
+                "wav": {
+                    "display_name": "WAV 16-bit PCM",
+                    "bitrate_strings": [
+                        "optimal (stereo ~635MB/h, mono ~318MB/h)"
+                    ],
+                    "type": "lossless",
+                    "endings": [
+                        "wav"
+                    ]
+                },
+                "chaps": {
+                    "display_name": "Chapters File",
+                    "type": "description",
+                    "endings": [
+                        "chapters.txt"
+                    ]
+                }
+            }
+        }
+    http_version: 
+  recorded_at: Fri, 18 Oct 2013 22:10:57 GMT
+recorded_with: VCR 2.6.0

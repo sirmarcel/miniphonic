@@ -1,0 +1,740 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://auphonic.com/api/info.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v0.8.8
+      Authorization:
+      - Basic c2lybWFyY2VsOm5hYy1kaWQtY2lkLXlvZC1qYS1zaGxlai15dWwteQ==
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      server:
+      - nginx/1.2.0
+      date:
+      - Fri, 18 Oct 2013 22:10:48 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      last-modified:
+      - Fri, 18 Oct 2013 22:04:33 GMT
+      expires:
+      - Fri, 18 Oct 2013 22:14:33 GMT
+      vary:
+      - Authorization
+      cache-control:
+      - max-age=600
+      access-control-allow-origin:
+      - '*'
+      access-control-allow-credentials:
+      - 'true'
+      access-control-allow-headers:
+      - Authorization,DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type
+    body:
+      encoding: UTF-8
+      string: |-
+        {
+            "status_code": 200,
+            "form_errors": {},
+            "error_code": null,
+            "error_message": "",
+            "data": {
+                "output_files": {
+                    "alac": {
+                        "display_name": "ALAC (M4A, MP4)",
+                        "bitrate_strings": [
+                            "optimal (stereo ~140MB/h, mono ~70MB/h)"
+                        ],
+                        "type": "lossless",
+                        "endings": [
+                            "m4a",
+                            "mp4"
+                        ]
+                    },
+                    "aac": {
+                        "display_name": "AAC (M4A, MP4, M4B)",
+                        "bitrates": [
+                            "24",
+                            "32",
+                            "40",
+                            "48",
+                            "56",
+                            "64",
+                            "80",
+                            "96",
+                            "112",
+                            "128",
+                            "160",
+                            "192",
+                            "256"
+                        ],
+                        "endings": [
+                            "m4a",
+                            "mp4",
+                            "m4b"
+                        ],
+                        "type": "lossy",
+                        "default_bitrate": "80",
+                        "bitrate_strings": [
+                            "24 kbps, HE AAC (~11MB/h)",
+                            "32 kbps, HE AAC (~14MB/h)",
+                            "40 kbps, HE AAC (~18MB/h)",
+                            "48 kbps, HE AAC (~21MB/h)",
+                            "56 kbps, HE AAC (~25MB/h)",
+                            "64 kbps, HE AAC (~28MB/h)",
+                            "80 kbps, HE AAC (~35MB/h)",
+                            "96 kbps, HE AAC (~42MB/h)",
+                            "112 kbps, HE AAC (~49MB/h)",
+                            "128 kbps (~56MB/h)",
+                            "160 kbps (~70MB/h)",
+                            "192 kbps (~84MB/h)",
+                            "256 kbps (~113MB/h)"
+                        ]
+                    },
+                    "descr": {
+                        "display_name": "Production Description",
+                        "type": "description",
+                        "endings": [
+                            "json",
+                            "xml",
+                            "yaml"
+                        ]
+                    },
+                    "waveform": {
+                        "display_name": "Waveform Image",
+                        "type": "description",
+                        "endings": [
+                            "waveform.png"
+                        ]
+                    },
+                    "psc": {
+                        "display_name": "Podlove Simple Chapters",
+                        "type": "description",
+                        "endings": [
+                            "psc",
+                            "xml"
+                        ]
+                    },
+                    "image": {
+                        "display_name": "Cover Image",
+                        "type": "description"
+                    },
+                    "mp3-vbr": {
+                        "display_name": "MP3 Variable Bitrate",
+                        "bitrates": [
+                            "32",
+                            "40",
+                            "48",
+                            "56",
+                            "64",
+                            "80",
+                            "96",
+                            "112",
+                            "128",
+                            "160",
+                            "192",
+                            "224",
+                            "256",
+                            "320"
+                        ],
+                        "endings": [
+                            "mp3"
+                        ],
+                        "type": "lossy",
+                        "default_bitrate": "96",
+                        "bitrate_strings": [
+                            "~32 kbps (~14MB/h)",
+                            "~40 kbps (~18MB/h)",
+                            "~48 kbps (~21MB/h)",
+                            "~56 kbps (~25MB/h)",
+                            "~64 kbps (~28MB/h)",
+                            "~80 kbps (~35MB/h)",
+                            "~96 kbps (~42MB/h)",
+                            "~112 kbps (~49MB/h)",
+                            "~128 kbps (~56MB/h)",
+                            "~160 kbps (~70MB/h)",
+                            "~192 kbps (~84MB/h)",
+                            "~224 kbps (~98MB/h)",
+                            "~256 kbps (~113MB/h)",
+                            "~320 kbps (~141MB/h)"
+                        ]
+                    },
+                    "vorbis": {
+                        "display_name": "Ogg Vorbis",
+                        "bitrates": [
+                            "32",
+                            "40",
+                            "48",
+                            "56",
+                            "64",
+                            "80",
+                            "96",
+                            "112",
+                            "128",
+                            "160",
+                            "192",
+                            "224",
+                            "256",
+                            "320"
+                        ],
+                        "endings": [
+                            "ogg",
+                            "oga"
+                        ],
+                        "type": "lossy",
+                        "default_bitrate": "96",
+                        "bitrate_strings": [
+                            "~32 kbps (~14MB/h)",
+                            "~40 kbps (~18MB/h)",
+                            "~48 kbps (~21MB/h)",
+                            "~56 kbps (~25MB/h)",
+                            "~64 kbps (~28MB/h)",
+                            "~80 kbps (~35MB/h)",
+                            "~96 kbps (~42MB/h)",
+                            "~112 kbps (~49MB/h)",
+                            "~128 kbps (~56MB/h)",
+                            "~160 kbps (~70MB/h)",
+                            "~192 kbps (~84MB/h)",
+                            "~224 kbps (~98MB/h)",
+                            "~256 kbps (~113MB/h)",
+                            "~320 kbps (~141MB/h)"
+                        ]
+                    },
+                    "opus": {
+                        "display_name": "Opus",
+                        "bitrates": [
+                            "6",
+                            "12",
+                            "16",
+                            "20",
+                            "24",
+                            "32",
+                            "40",
+                            "48",
+                            "56",
+                            "64",
+                            "80",
+                            "96",
+                            "112",
+                            "128",
+                            "160",
+                            "192",
+                            "256"
+                        ],
+                        "endings": [
+                            "opus"
+                        ],
+                        "type": "lossy",
+                        "default_bitrate": "64",
+                        "bitrate_strings": [
+                            "~6 kbps (~3MB/h)",
+                            "~12 kbps (~5MB/h)",
+                            "~16 kbps (~7MB/h)",
+                            "~20 kbps (~9MB/h)",
+                            "~24 kbps (~11MB/h)",
+                            "~32 kbps (~14MB/h)",
+                            "~40 kbps (~18MB/h)",
+                            "~48 kbps (~21MB/h)",
+                            "~56 kbps (~25MB/h)",
+                            "~64 kbps (~28MB/h)",
+                            "~80 kbps (~35MB/h)",
+                            "~96 kbps (~42MB/h)",
+                            "~112 kbps (~49MB/h)",
+                            "~128 kbps (~56MB/h)",
+                            "~160 kbps (~70MB/h)",
+                            "~192 kbps (~84MB/h)",
+                            "~256 kbps (~113MB/h)"
+                        ]
+                    },
+                    "video": {
+                        "display_name": "Video (same format as input)",
+                        "type": "video",
+                        "bitrate_strings": [
+                            "same bitrate as input"
+                        ]
+                    },
+                    "mp3": {
+                        "display_name": "MP3",
+                        "bitrates": [
+                            "32",
+                            "40",
+                            "48",
+                            "56",
+                            "64",
+                            "80",
+                            "96",
+                            "112",
+                            "128",
+                            "160",
+                            "192",
+                            "224",
+                            "256",
+                            "320"
+                        ],
+                        "endings": [
+                            "mp3"
+                        ],
+                        "type": "lossy",
+                        "default_bitrate": "112",
+                        "bitrate_strings": [
+                            "32 kbps (~14MB/h)",
+                            "40 kbps (~18MB/h)",
+                            "48 kbps (~21MB/h)",
+                            "56 kbps (~25MB/h)",
+                            "64 kbps (~28MB/h)",
+                            "80 kbps (~35MB/h)",
+                            "96 kbps (~42MB/h)",
+                            "112 kbps (~49MB/h)",
+                            "128 kbps (~56MB/h)",
+                            "160 kbps (~70MB/h)",
+                            "192 kbps (~84MB/h)",
+                            "224 kbps (~98MB/h)",
+                            "256 kbps (~113MB/h)",
+                            "320 kbps (~141MB/h)"
+                        ]
+                    },
+                    "flac": {
+                        "display_name": "FLAC",
+                        "bitrate_strings": [
+                            "optimal (stereo ~130MB/h, mono ~65MB/h)"
+                        ],
+                        "type": "lossless",
+                        "endings": [
+                            "flac"
+                        ]
+                    },
+                    "input": {
+                        "display_name": "Unprocessed Input File",
+                        "type": "description",
+                        "bitrate_strings": [
+                            "same bitrate as input"
+                        ]
+                    },
+                    "wav": {
+                        "display_name": "WAV 16-bit PCM",
+                        "bitrate_strings": [
+                            "optimal (stereo ~635MB/h, mono ~318MB/h)"
+                        ],
+                        "type": "lossless",
+                        "endings": [
+                            "wav"
+                        ]
+                    },
+                    "chaps": {
+                        "display_name": "Chapters File",
+                        "type": "description",
+                        "endings": [
+                            "chapters.txt"
+                        ]
+                    }
+                },
+                "service_types": {
+                    "ftp": {
+                        "display_name": "FTP",
+                        "parameters": null
+                    },
+                    "webdav": {
+                        "display_name": "WebDAV",
+                        "parameters": null
+                    },
+                    "youtube": {
+                        "display_name": "YouTube",
+                        "parameters": {
+                            "category": {
+                                "default_value": "",
+                                "type": "select",
+                                "display_name": "Category",
+                                "options": [
+                                    {
+                                        "display_name": "Autos & Vehicles",
+                                        "value": "Autos"
+                                    },
+                                    {
+                                        "display_name": "Comedy",
+                                        "value": "Comedy"
+                                    },
+                                    {
+                                        "display_name": "Education",
+                                        "value": "Education"
+                                    },
+                                    {
+                                        "display_name": "Entertainment",
+                                        "value": "Entertainment"
+                                    },
+                                    {
+                                        "display_name": "Film & Animation",
+                                        "value": "Film"
+                                    },
+                                    {
+                                        "display_name": "Gaming",
+                                        "value": "Games"
+                                    },
+                                    {
+                                        "display_name": "Howto & Style",
+                                        "value": "Howto"
+                                    },
+                                    {
+                                        "display_name": "Music",
+                                        "value": "Music"
+                                    },
+                                    {
+                                        "display_name": "News & Politics",
+                                        "value": "News"
+                                    },
+                                    {
+                                        "display_name": "Nonprofits & Activism",
+                                        "value": "Nonprofit"
+                                    },
+                                    {
+                                        "display_name": "People & Blogs",
+                                        "value": "People"
+                                    },
+                                    {
+                                        "display_name": "Pets & Animals",
+                                        "value": "Animals"
+                                    },
+                                    {
+                                        "display_name": "Science & Technology",
+                                        "value": "Tech"
+                                    },
+                                    {
+                                        "display_name": "Sports",
+                                        "value": "Sports"
+                                    },
+                                    {
+                                        "display_name": "Travel & Events",
+                                        "value": "Travel"
+                                    }
+                                ]
+                            },
+                            "privacy": {
+                                "default_value": "public",
+                                "type": "select",
+                                "display_name": "Privacy",
+                                "options": [
+                                    {
+                                        "display_name": "Private",
+                                        "value": "private"
+                                    },
+                                    {
+                                        "display_name": "Public",
+                                        "value": "public"
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    "libsyn": {
+                        "display_name": "libsyn",
+                        "parameters": null
+                    },
+                    "archiveorg": {
+                        "display_name": "ArchiveOrg",
+                        "parameters": null
+                    },
+                    "amazons3": {
+                        "display_name": "AmazonS3",
+                        "parameters": null
+                    },
+                    "blubrry": {
+                        "display_name": "blubrry",
+                        "parameters": null
+                    },
+                    "dropbox": {
+                        "display_name": "Dropbox",
+                        "parameters": null
+                    },
+                    "sftp": {
+                        "display_name": "SFTP",
+                        "parameters": null
+                    },
+                    "soundcloud": {
+                        "display_name": "SoundCloud",
+                        "parameters": {
+                            "track_type": {
+                                "default_value": "",
+                                "type": "select",
+                                "display_name": "Type",
+                                "options": [
+                                    {
+                                        "display_name": "",
+                                        "value": ""
+                                    },
+                                    {
+                                        "display_name": "Other",
+                                        "value": "other"
+                                    },
+                                    {
+                                        "display_name": "One Shot Sample",
+                                        "value": "sample"
+                                    },
+                                    {
+                                        "display_name": "Sound Effect",
+                                        "value": "sound effect"
+                                    },
+                                    {
+                                        "display_name": "Loop",
+                                        "value": "loop"
+                                    },
+                                    {
+                                        "display_name": "Stem",
+                                        "value": "stem"
+                                    },
+                                    {
+                                        "display_name": "Work in Progress",
+                                        "value": "in progress"
+                                    },
+                                    {
+                                        "display_name": "Demo",
+                                        "value": "demo"
+                                    },
+                                    {
+                                        "display_name": "Podcast",
+                                        "value": "podcast"
+                                    },
+                                    {
+                                        "display_name": "Spoken",
+                                        "value": "spoken"
+                                    },
+                                    {
+                                        "display_name": "Recording",
+                                        "value": "recording"
+                                    },
+                                    {
+                                        "display_name": "Live",
+                                        "value": "live"
+                                    },
+                                    {
+                                        "display_name": "Remix",
+                                        "value": "remix"
+                                    },
+                                    {
+                                        "display_name": "Original",
+                                        "value": "original"
+                                    }
+                                ]
+                            },
+                            "sharing": {
+                                "default_value": "public",
+                                "type": "select",
+                                "display_name": "Sharing",
+                                "options": [
+                                    {
+                                        "display_name": "Private",
+                                        "value": "private"
+                                    },
+                                    {
+                                        "display_name": "Public",
+                                        "value": "public"
+                                    }
+                                ]
+                            },
+                            "downloadable": {
+                                "default_value": true,
+                                "type": "checkbox",
+                                "display_name": "Downloadable"
+                            }
+                        }
+                    }
+                },
+                "production_status": {
+                    "0": "File Upload",
+                    "1": "Waiting",
+                    "2": "Error",
+                    "3": "Done",
+                    "4": "Audio Processing",
+                    "5": "Audio Encoding",
+                    "6": "Outgoing File Transfer",
+                    "7": "Audio Mono Mixdown",
+                    "8": "Splitting Audio On Chapter Marks",
+                    "9": "Incomplete Form",
+                    "10": "Production Not Started Yet",
+                    "11": "Production Outdated",
+                    "12": "Incoming File Transfer",
+                    "13": "Stopping the Production"
+                },
+                "algorithms": {
+                    "normloudness": {
+                        "default_value": true,
+                        "type": "checkbox",
+                        "display_name": "Global Loudness Normalization",
+                        "description": "Adjusts the global, overall loudness to the specified Loudness Target, so that all processed files have a similar average loudness."
+                    },
+                    "loudnesstarget": {
+                        "default_value": -16,
+                        "display_name": "Loudness Target",
+                        "description": "Select the loudness target in LUFS for Global Loudness Normalization, higher values result in louder audio outputs.",
+                        "belongs_to": "normloudness",
+                        "type": "select",
+                        "options": [
+                            {
+                                "display_name": "-13 LUFS (very loud)",
+                                "value": -13
+                            },
+                            {
+                                "display_name": "-15 LUFS",
+                                "value": -15
+                            },
+                            {
+                                "display_name": "-16 LUFS (mobile)",
+                                "value": -16
+                            },
+                            {
+                                "display_name": "-18 LUFS (ReplayGain similarity)",
+                                "value": -18
+                            },
+                            {
+                                "display_name": "-20 LUFS",
+                                "value": -20
+                            },
+                            {
+                                "display_name": "-23 LUFS, EBU R128 (TV, Europe)",
+                                "value": -23
+                            },
+                            {
+                                "display_name": "-24 LUFS, ATSC A/85, no gate (TV, US)",
+                                "value": -24
+                            },
+                            {
+                                "display_name": "-31 LUFS (very quiet)",
+                                "value": -31
+                            }
+                        ]
+                    },
+                    "denoise": {
+                        "default_value": false,
+                        "type": "checkbox",
+                        "display_name": "Noise Reduction ",
+                        "description": "Classifies regions with different backgrounds and automatically removes noise and hum."
+                    },
+                    "denoiseamount": {
+                        "default_value": 0,
+                        "display_name": "Noise Reduction Amount",
+                        "description": "Maximum noise reduction amount, higher values remove more noise. Use Automatic if you are no expert!",
+                        "belongs_to": "denoise",
+                        "type": "select",
+                        "options": [
+                            {
+                                "display_name": "Auto",
+                                "value": 0
+                            },
+                            {
+                                "display_name": "3 dB",
+                                "value": 3
+                            },
+                            {
+                                "display_name": "6 dB (low)",
+                                "value": 6
+                            },
+                            {
+                                "display_name": "9 dB",
+                                "value": 9
+                            },
+                            {
+                                "display_name": "12 dB (medium)",
+                                "value": 12
+                            },
+                            {
+                                "display_name": "15 dB",
+                                "value": 15
+                            },
+                            {
+                                "display_name": "18 dB",
+                                "value": 18
+                            },
+                            {
+                                "display_name": "24 dB (high)",
+                                "value": 24
+                            },
+                            {
+                                "display_name": "30 dB",
+                                "value": 30
+                            },
+                            {
+                                "display_name": "100 dB (complete)",
+                                "value": 100
+                            }
+                        ]
+                    },
+                    "hipfilter": {
+                        "default_value": true,
+                        "type": "checkbox",
+                        "display_name": "Filtering",
+                        "description": "Filters unnecessary and disturbing low frequencies depending on the context (speech, music, noise)."
+                    },
+                    "leveler": {
+                        "default_value": true,
+                        "type": "checkbox",
+                        "display_name": "Adaptive Leveler",
+                        "description": "Corrects level differences between speakers, music and speech, etc. to achieve a balanced overall loudness."
+                    }
+                },
+                "file_endings": {
+                    "alac": [
+                        "m4a",
+                        "mp4"
+                    ],
+                    "descr": [
+                        "json",
+                        "xml",
+                        "yaml"
+                    ],
+                    "aac": [
+                        "m4a",
+                        "mp4",
+                        "m4b"
+                    ],
+                    "opus": [
+                        "opus"
+                    ],
+                    "psc": [
+                        "psc",
+                        "xml"
+                    ],
+                    "image": [
+                        ""
+                    ],
+                    "mp3-vbr": [
+                        "mp3"
+                    ],
+                    "vorbis": [
+                        "ogg",
+                        "oga"
+                    ],
+                    "waveform": [
+                        "waveform.png"
+                    ],
+                    "video": [
+                        ""
+                    ],
+                    "mp3": [
+                        "mp3"
+                    ],
+                    "flac": [
+                        "flac"
+                    ],
+                    "wav": [
+                        "wav"
+                    ],
+                    "input": [
+                        ""
+                    ],
+                    "chaps": [
+                        "chapters.txt"
+                    ]
+                }
+            }
+        }
+    http_version: 
+  recorded_at: Fri, 18 Oct 2013 22:10:57 GMT
+recorded_with: VCR 2.6.0
