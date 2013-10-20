@@ -16,7 +16,6 @@ module Miniphonic
     end
 
     attr_accessor :uuid
-    attr_accessor :data
 
     def endpoint
       raise NotImplementedError, "#endpoint has to be overridden in #{ self.class.name }"
