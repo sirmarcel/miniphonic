@@ -87,6 +87,10 @@ and smile.
 
 ### Productions
 
+#### Using a preset
+
+If you want to use a preset to create your production, use ```production.create_from_preset("a preset uuid")```.
+
 #### Getting audio in
 
 You can upload an input file (to a production with a uuid) by running

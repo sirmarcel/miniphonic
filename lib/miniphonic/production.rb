@@ -8,6 +8,12 @@ module Miniphonic
       "production"
     end
 
+    def create_from_preset(preset)
+      self.preset = preset
+      self.create
+      self.get_attributes
+    end
+
     def upload_audio(path)
       command :upload, path_to_payload(path, :input_file)
     end
